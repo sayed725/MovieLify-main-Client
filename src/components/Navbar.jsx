@@ -1,13 +1,14 @@
-// import React, { useContext } from 'react';
+import React, { useContext } from 'react';
 import { Link, NavLink } from 'react-router-dom';
-// import { AuthContext } from '../Provider/AuthProvider';
+import { AuthContext } from '../Porvider/AuthProvider';
+
 
 
 
 
 const Navbar = () => {
 
-//   const {  user , logOut } = useContext(AuthContext)
+  const {  user , logOut } = useContext(AuthContext)
   
 
 
@@ -98,7 +99,7 @@ const Navbar = () => {
            </div>
 
 
-               : <Link to='/auth/login'  className="btn rounded-md border-none  text-white  bg-green-600 hover:text-black hover:bg-green-700">Login</Link>
+               : <Link to='/login'  className="btn rounded-md border-none  text-white  bg-green-600 hover:text-black hover:bg-green-700">Login</Link>
           }
          
         </div>
