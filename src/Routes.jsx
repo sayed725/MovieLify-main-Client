@@ -4,6 +4,10 @@ import Error from "./Pages/Error";
 import Home from "./Pages/Home";
 import Register from "./Pages/Register";
 import Login from "./Pages/Login";
+import AllMovies from "./Pages/AllMovies";
+import AddMovie from "./Pages/AddMovie";
+import MyFavourites from "./Pages/MyFavourites";
+import About from "./Pages/About";
 
 
 
@@ -19,7 +23,19 @@ const router = createBrowserRouter([
         },
         {
             path:'/allmovies',
-            element: <Register></Register>
+            element: <AllMovies></AllMovies>
+        },
+        {
+            path:'/addmovies',
+            element: <AddMovie></AddMovie>
+        },
+        {
+            path:'/favorites',
+            element: <MyFavourites></MyFavourites>
+        },
+        {
+            path:'/about',
+            element: <About></About>
         },
         {
             path:'/register',

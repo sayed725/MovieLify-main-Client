@@ -15,16 +15,18 @@ const Navbar = () => {
 
     const links = <>
      <li><NavLink className={({ isActive }) =>
-            ` ${isActive ? "tab-active  text-green-600 underline" : "" }`} to='/'>Home</NavLink></li>
+            ` ${isActive ? "tab-active  text-red-600 underline" : "" }`} to='/'>Home</NavLink></li>
      <li><NavLink className={({ isActive }) =>
-            ` ${isActive ? "tab-active  text-green-600 underline" : "" }`} to='/about'>About Us</NavLink></li>
+            ` ${isActive ? "tab-active  text-red-600 underline" : "" }`} to='/allmovies'>All Movies</NavLink></li>
     
 
      <li><NavLink className={({ isActive }) =>
-            ` ${isActive ? "tab-active  text-green-600 underline" : "" }`} to='/userprofile'>My Profile</NavLink></li>
+            ` ${isActive ? "tab-active  text-red-600 underline" : "" }`} to='/addmovies'>Add Movie</NavLink></li>
      <li><NavLink className={({ isActive }) =>
-            ` ${isActive ? "tab-active  text-green-600 underline" : "" }`} to='/updateprofile'>UpdateProfile</NavLink></li>
-
+            ` ${isActive ? "tab-active  text-red-600 underline" : "" }`} to='/favorites'>My Favorites</NavLink></li>
+     <li><NavLink className={({ isActive }) =>
+            ` ${isActive ? "tab-active  text-red-600 underline" : "" }`} to='/about'>About Us</NavLink></li>
+   
     </>
 
 
