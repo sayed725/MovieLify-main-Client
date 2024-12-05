@@ -116,14 +116,14 @@ const Login = () => {
                         </label>
                     </div>
                     <div className="form-control mt-6">
-                        <button className="btn rounded-md text-white bg-gradient-to-r from-[#184E68] to-[#57CA85] hover:text-black">Login</button>
+                        <button className="btn rounded-md text-white bg-[#ff4545] hover:text-black hover:bg-red-600">Login</button>
                     </div>
                 </form>
 
              
                <div className='md:w-3/4 lg:w-1/3 mx-auto mt-5'>
                <button onClick={handleGoogleSignIn}
-                className="w-full btn rounded-md text-white bg-gradient-to-r from-[#184E68] to-[#57CA85] hover:text-black">
+                className="w-full btn rounded-md text-white bg-[#ff4545] hover:text-black hover:bg-red-600">
                     <FaGoogle ></FaGoogle>
                     Log In with Google
                 </button>
@@ -131,7 +131,7 @@ const Login = () => {
                
 
 
-                <p className="text-center mt-4 textarea-sm">Do not have an account <Link className="text-green-600 font-bold" to="/register">Register</Link></p>
+                <p className="text-center mt-4 textarea-sm">Do not have an account <Link className="text-red-600 font-bold" to="/register">Register</Link></p>
             </div>
         </div>
     );

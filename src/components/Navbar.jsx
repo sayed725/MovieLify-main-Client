@@ -101,11 +101,11 @@ const Navbar = () => {
 
 
            <div>
-             <button onClick={logOut} className="btn rounded-md border-none  text-white  bg-[#ff4545] hover:text-black hover:bg-green-600">Log-out</button>  
+             <button onClick={logOut} className="btn rounded-md border-none  text-white  bg-[#ff4545] hover:text-black hover:bg-red-600">Log-out</button>  
            </div>
 
 
-               : <Link to='/login'  className="btn rounded-md border-none  text-white  bg-[#ff4545] hover:text-black hover:bg-green-700">Login</Link>
+               : <Link to='/login'  className="btn rounded-md border-none  text-white  bg-[#ff4545] hover:text-black hover:bg-red-700">Login</Link>
           }
          
         </div>

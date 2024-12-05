@@ -256,7 +256,7 @@ const AddMovie = () => {
             {error && <label className="label text-red-600">{error}</label>}
           </div>
           <div className="form-control mt-6">
-            <button className="btn bg-[#ff4545] hover:bg-yellow-500">
+            <button className="btn text-white bg-[#ff4545] hover:text-black hover:bg-red-600">
               Add Coffee
             </button>
           </div>

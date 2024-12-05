@@ -2,6 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
+import { FaRegCirclePlay } from "react-icons/fa6";
 
 
 const Banner = () => {
@@ -22,81 +23,97 @@ const Banner = () => {
         {/* Slide 1 */}
         <SwiperSlide>
           <div
-            className="h-[500px] w-full flex flex-col justify-center items-center text-gray-300 text-center bg-cover bg-center"
+            className="h-[500px] w-full flex flex-col justify-end items-center text-gray-300 text-start bg-cover bg-center"
             style={{
               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/banner-1.png')`,
             }}
           >
-            <h1 className="animate__animated animate__slideInDown text-4xl md:text-6xl font-bold mb-4">
-              Explore Majestic Forests
+            <div className="flex justify-center items-center gap-3 lg:gap-5 py-5" >
+                <div>
+                <FaRegCirclePlay className="text-7xl lg:text-9xl text-[#ff4545] hover:text-white" />
+                </div>
+           <div className="">
+           <h1 className=" text-2xl lg:text-4xl font-bold">
+            The Shawshank Redemption
             </h1>
-            <p className="text-lg md:text-xl mb-6 hidden sm:block  animate__slideInUp animate__animated">
-              Venture deep into lush, pristine forests, uncovering their secrets
-              and beauty while ensuring environmental sustainability.
+            <p className="text-xl py-2">
+             View Trailer
             </p>
-            <a href="#1234" className="bg-[#ff4545] hover:text-black  font-semibold px-6 py-3 rounded-md ">
-              Explore Now
-            </a>
+           
+           </div>
+            </div>
           </div>
         </SwiperSlide>
 
         {/* Slide 2 */}
         <SwiperSlide>
           <div
-            className="h-full w-full flex flex-col justify-center items-center text-gray-300 text-center bg-cover bg-center"
+            className="h-full w-full flex flex-col justify-end items-center text-gray-300 text-start bg-cover bg-center"
             style={{
               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/banner-2.jpg')`,
             }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 animate__animated animate__slideInDown ">
-              Discover Hidden Paradises
+           <div className="flex justify-center items-center gap-3 lg:gap-5 py-5" >
+                <div>
+                <FaRegCirclePlay className="text-7xl lg:text-9xl text-[#ff4545] hover:text-white" />
+                </div>
+           <div className="">
+           <h1 className=" text-2xl lg:text-4xl font-bold">
+            The Shawshank Redemption
             </h1>
-            <p className="text-lg md:text-xl mb-6 hidden sm:block  animate__slideInUp animate__animated">
-              Immerse yourself in the beauty of untouched nature and connect
-              with the wild in the most sustainable way.
+            <p className="text-xl py-2">
+             View Trailer
             </p>
-            <a href="#1234" className="bg-[#ff4545] hover:text-black  font-semibold px-6 py-3 rounded-md">
-              Explore Now
-            </a>
+           
+           </div>
+            </div>
           </div>
         </SwiperSlide>
          {/* Slide 3 */}
         <SwiperSlide>
           <div
-            className="h-full w-full flex flex-col justify-center items-center text-gray-300 text-center bg-cover bg-center"
+            className="h-full w-full flex flex-col justify-end items-center text-gray-300 text-start bg-cover bg-center"
             style={{
               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/banner-3.jpg')`,
             }}
           >
             
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 animate__animated animate__slideInDown">
-            Discover the Heart of the Jungle
+            <div className="flex justify-center items-center gap-3 lg:gap-5 py-5" >
+                <div>
+                <FaRegCirclePlay className="text-7xl lg:text-9xl text-[#ff4545] hover:text-white" />
+                </div>
+           <div className="">
+           <h1 className=" text-2xl lg:text-4xl font-bold">
+            The Shawshank Redemption
             </h1>
-            <p className="text-lg md:text-xl mb-6 hidden sm:block  animate__slideInUp animate__animated">
-            Dive into the vibrant wilderness of lush jungles, teeming with life and secrets, while championing efforts to protect their fragile ecosystems.
+            <p className="text-xl py-2">
+             View Trailer
             </p>
-            <a href="#1234" className="bg-[#ff4545] hover:text-black  font-semibold px-6 py-3 rounded-md">
-              Explore Now
-            </a>
+           </div>
+            </div>
           </div>
         </SwiperSlide> {/* Slide 4 */}
         <SwiperSlide>
           <div
-            className="h-full w-full flex flex-col justify-center items-center text-gray-300 text-center bg-cover bg-center"
+            className="h-full w-full flex flex-col justify-end items-center text-gray-300 text-start bg-cover bg-center"
             style={{
               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/banner-4.png')`,
 
             }}
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-4 animate__animated animate__slideInDown">
-            Wander Through Enchanted Woods
+           <div className="flex justify-center items-center gap-3 lg:gap-5 py-5" >
+                <div>
+                <FaRegCirclePlay className="text-7xl lg:text-9xl text-[#ff4545] hover:text-white" />
+                </div>
+           <div className="">
+           <h1 className="text-2xl lg:text-4xl font-bold">
+            The Shawshank Redemption
             </h1>
-            <p className="text-lg md:text-xl mb-6 hidden sm:block animate__slideInUp animate__animated">
-            Step into ancient forests filled with towering trees, hidden wildlife, and the serene whispers of nature, preserving these wonders for generations to come.
+            <p className="text-xl py-2">
+             View Trailer
             </p>
-            <a href="#1234" className="bg-[#ff4545] hover:text-black  font-semibold px-6 py-3 rounded-md">
-              Explore Now
-            </a>
+           </div>
+            </div>
           </div>
         </SwiperSlide>
       </Swiper>
