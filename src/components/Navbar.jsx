@@ -14,18 +14,22 @@ const Navbar = () => {
 
 
     const links = <>
-     <li><NavLink className={({ isActive }) =>
-            ` ${isActive ? "tab-active  text-white underline underline-offset-2" : "text-white" }`} to='/'>Home</NavLink></li>
-     <li><NavLink className={({ isActive }) =>
-            ` ${isActive ? "tab-active  text-white underline" : "text-white" }`} to='/allmovies'>All Movies</NavLink></li>
+     <li><NavLink
+      className={({ isActive }) => isActive ? "active border-b-2 border-red-600 rounded-none hover:border-b-2 hover:text-red-600 hover:border-red-600 hover:rounded-none" : " hover:border-b-2 hover:border-red-600 hover:rounded-none"} 
+      to='/'>Home</NavLink></li>
+
+     <li><NavLink  className={({ isActive }) => isActive ? "active border-b-2 border-red-600 rounded-none hover:border-b-2 hover:border-red-600 hover:rounded-none" : " hover:border-b-2 hover:border-red-600 hover:rounded-none"} 
+      to='/allmovies'>All Movies</NavLink></li>
     
 
-     <li><NavLink className={({ isActive }) =>
-            ` ${isActive ? "tab-active  text-white underline" : "text-white" }`} to='/addmovies'>Add Movie</NavLink></li>
-     <li><NavLink className={({ isActive }) =>
-            ` ${isActive ? "tab-active  text-white underline" : "text-white" }`} to='/favorites'>My Favorites</NavLink></li>
-     <li><NavLink className={({ isActive }) =>
-            ` ${isActive ? "tab-active  text-white underline" : "text-white" }`} to='/about'>About Us</NavLink></li>
+     <li><NavLink  className={({ isActive }) => isActive ? "active border-b-2 border-red-600 rounded-none hover:border-b-2 hover:border-red-600 hover:rounded-none" : " hover:border-b-2 hover:border-red-600 hover:rounded-none"} 
+     to='/addmovies'>Add Movie</NavLink></li>
+
+     <li><NavLink  className={({ isActive }) => isActive ? "active border-b-2 border-red-600 rounded-none hover:border-b-2 hover:border-red-600 hover:rounded-none" : " hover:border-b-2 hover:border-red-600 hover:rounded-none"}  
+     to='/favorites'>My Favorites</NavLink></li>
+
+     <li><NavLink  className={({ isActive }) => isActive ? "active border-b-2 border-red-600 rounded-none hover:border-b-2 hover:border-red-600 hover:rounded-none" : " hover:border-b-2 hover:border-red-600 hover:rounded-none"} 
+     to='/about'>About Us</NavLink></li>
    
     </>
 
@@ -51,7 +55,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-[#0f2d3c] rounded-box mt-3 w-52 p-2 shadow">
+              className="menu menu-sm dropdown-content bg-[#0f2d3c] rounded-box mt-3 w-40 z-50 text-white p-2 shadow">
              {links}
             </ul>
           </div>
@@ -60,7 +64,7 @@ const Navbar = () => {
           </a>
         </div>
         <div className="navbar-center hidden lg:flex">
-          <ul className="menu menu-horizontal px-1 text-red-900">
+          <ul className="menu menu-horizontal px-1 text-white ">
            {links}
           </ul>
         </div>
