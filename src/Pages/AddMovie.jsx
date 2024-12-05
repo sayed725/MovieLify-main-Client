@@ -1,8 +1,19 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import Swal from "sweetalert2";
 
+import ReactStars from "react-rating-stars-component";
+import { AuthContext } from "../Porvider/AuthProvider";
+
 const AddMovie = () => {
+  const { user } = useContext(AuthContext);
   const [error, setError] = useState("");
+  const [rating, setRating] = useState(0); // Stores the rating value
+
+  const ratingChanged = (newRating) => {
+    setRating(newRating);
+  };
+
+  const genres = ["Comedy", "Drama", "Horror", "Action", "Romance", "Thriller"];
 
   // Generate years dynamically (e.g., from 1900 to the current year)
   const currentYear = new Date().getFullYear();
@@ -36,6 +47,7 @@ const AddMovie = () => {
       setError("Title have at least 2 characters");
       return;
     }
+
     const genre = e.target.genre.value;
 
     const duration = e.target.duration.value;
@@ -45,8 +57,23 @@ const AddMovie = () => {
       return;
     }
     const year = e.target.year.value;
-    const details = e.target.details.value;
-    const photo = e.target.photo.value;
+
+    if (rating === 0) {
+      setError("Please select a rating before adding the movie.");
+      return;
+    }
+
+    const summary = e.target.summary.value;
+
+    if (summary.length < 10) {
+      setError("Summary must be at least 10 characters long."); // Validate on submit
+      return;
+    }
+
+    const name = e.target.name.value;
+    const email = e.target.email.value;
+
+    // const rating = e.target.rating.value
 
     const newCoffee = {
       poster,
@@ -54,8 +81,10 @@ const AddMovie = () => {
       genre,
       duration,
       year,
-      details,
-      photo,
+      rating,
+      summary,
+      name,
+      email,
     };
     console.log(newCoffee);
 
@@ -129,12 +158,12 @@ const AddMovie = () => {
                 <span className="label-text">Select Genre:</span>
               </label>
               <select name="genre" className="input input-bordered" required>
-                <option value="">-- Select Genre --</option>
-                <option value="comedy">Comedy</option>
-                <option value="drama">Drama</option>
-                <option value="horror">Horror</option>
-                <option value="action">Action</option>
-                <option value="thriller">Thriller</option>
+                <option value="">-- Select Year --</option>
+                {genres.map((genre) => (
+                  <option key={genre} value={genre}>
+                    {genre}
+                  </option>
+                ))}
               </select>
             </div>
             <div className="form-control flex-1">
@@ -156,8 +185,7 @@ const AddMovie = () => {
               <label className="label">
                 <span className="label-text">Select Release Year:</span>
               </label>
-              <select
-             name="year" className="input input-bordered" required>
+              <select name="year" className="input input-bordered" required>
                 <option value="">-- Select Year --</option>
                 {years.map((year) => (
                   <option key={year} value={year}>
@@ -168,29 +196,61 @@ const AddMovie = () => {
             </div>
             <div className="form-control flex-1">
               <label className="label">
-                <span className="label-text">Details</span>
+                <span className="label-text">Ratings</span>
               </label>
-              <input
-                type="text"
-                name="details"
-                placeholder="Coffee Details"
-                className="input input-bordered"
-                required
-              />
+              <div className="flex gap-5 input input-bordered items-center">
+                <ReactStars
+                  count={10}
+                  onChange={ratingChanged}
+                  size={24}
+                  activeColor="#ffd700"
+                />
+                <p className=" text-gray-600">
+                  {rating} / 10{" "}
+                  {/* Show numerical rating (converting percentage to 5-point scale) */}
+                </p>
+              </div>
             </div>
           </div>
 
           <div className="form-control">
             <label className="label">
-              <span className="label-text">Photo URL</span>
+              <span className="label-text">Summary</span>
             </label>
-            <input
+            <textarea
               type="text"
-              name="photo"
-              placeholder="Photo url"
-              className="input input-bordered"
+              name="summary"
+              placeholder="Please Write a Short Summary"
+              className="rounded-md border-2 hover:border-slate-400 text-center py-5  px-10 mx-auto  w-full font-semibold"
               required
             />
+          </div>
+          {/* user email & name  */}
+          <div className="flex flex-col lg:flex-row gap-5">
+            <div className="form-control flex-1">
+              <label className="label">
+                <span className="label-text">User Name</span>
+              </label>
+              <input
+                type="text"
+                name="name"
+                value={user?.displayName}
+                readOnly
+                className="input input-bordered"
+              />
+            </div>
+            <div className="form-control flex-1">
+              <label className="label">
+                <span className="label-text">User Email</span>
+              </label>
+              <input
+                type="text"
+                name="email"
+                value={user?.email}
+                readOnly
+                className="input input-bordered"
+              />
+            </div>
           </div>
           <div className="text-center mx-auto">
             {error && <label className="label text-red-600">{error}</label>}
