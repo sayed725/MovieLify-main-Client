@@ -13,7 +13,7 @@ const AddMovie = () => {
     setRating(newRating);
   };
 
-  const genres = ["Comedy", "Drama", "Horror", "Action", "Romance", "Thriller"];
+  const genres = ["Comedy", "Drama", "Horror", "Action", "Romance", "Thriller", "Sci-Fi"];
 
   // Generate years dynamically (e.g., from 1900 to the current year)
   const currentYear = new Date().getFullYear();
@@ -75,7 +75,7 @@ const AddMovie = () => {
 
     // const rating = e.target.rating.value
 
-    const newCoffee = {
+    const newMovie = {
       poster,
       title,
       genre,
@@ -86,29 +86,30 @@ const AddMovie = () => {
       name,
       email,
     };
-    console.log(newCoffee);
+    console.log(newMovie);
 
-    // // send data to the server
-    // fetch('http://localhost:5001/coffee',{
-    //     method: 'POST',
-    //     headers: {
-    //         'content-type' : 'application/json'
-    //     },
-    //     body: JSON.stringify(newCoffee)
-    // })
+    // send data to the server
+    fetch('http://localhost:5001/movie',{
+        method: 'POST',
+        headers: {
+            'content-type' : 'application/json'
+        },
+        body: JSON.stringify(newMovie)
+    })
 
-    // .then(res => res.json())
-    // .then(data =>{
-    //     console.log(data)
-    //     if(data.insertedId){
-    //         Swal.fire({
-    //             title: 'Success!',
-    //             text: 'Coffee added successfully',
-    //             icon: 'success',
-    //             confirmButtonText: 'Ok'
-    //         });
-    //     }
-    // })
+    .then(res => res.json())
+    .then(data =>{
+        console.log(data)
+        if(data.insertedId){
+            Swal.fire({
+                title: 'Success!',
+                text: 'Movie added successfully',
+                icon: 'success',
+                confirmButtonText: 'Ok'
+            });
+            e.target.reset();
+        }
+    })
   };
 
   return (

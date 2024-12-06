@@ -10,7 +10,7 @@ const Home = () => {
            <div>
            <Banner></Banner>
            </div>
-           <div className='py-5 sm:py-[50px]'>
+           <div className=' bg-[#1b1d24] py-5 sm:py-[50px]'>
             <ShowMovies></ShowMovies>
            </div>
            <div className='py-5 sm:py-[50px]'>

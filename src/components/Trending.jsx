@@ -12,39 +12,39 @@ import { FaRegCirclePlay } from "react-icons/fa6";
 const Trending = () => {
   const movies = [
     {
-      title: "Busting Car",
-      genre: "Drama, Action",
-      rating: 4,
+      title: "Gladiator",
+      genre: "Action",
+      rating: 7,
       image: "https://via.placeholder.com/300x400", // Replace with your image URLs
     },
     {
-      title: "Busting Car",
-      genre: "Drama, Action",
-      rating: 4,
+      title: "Moana 2",
+      genre: "Adventure",
+      rating: 6,
       image: "https://via.placeholder.com/300x400", // Replace with your image URLs
     },
     {
-      title: "Busting Car",
-      genre: "Drama, Action",
-      rating: 4,
+      title: "Wicked",
+      genre: "Romance",
+      rating: 9,
       image: "https://via.placeholder.com/300x400", // Replace with your image URLs
     },
     {
-      title: "Busting Car",
-      genre: "Drama, Action",
-      rating: 4,
+      title: "Deadpool & Wolverine",
+      genre: "Action",
+      rating: 9,
       image: "https://via.placeholder.com/300x400", // Replace with your image URLs
     },
     {
-      title: "Busting Car",
-      genre: "Drama, Action",
-      rating: 4,
+      title: "Alien: Romulus",
+      genre: "Sci-Fi",
+      rating: 6,
       image: "https://via.placeholder.com/300x400", // Replace with your image URLs
     },
     {
-      title: "Busting Car",
-      genre: "Drama, Action",
-      rating: 4,
+      title: "Twisters",
+      genre: "Triller",
+      rating: 8,
       image: "https://via.placeholder.com/300x400", // Replace with your image URLs
     },
     // Add more movies here
