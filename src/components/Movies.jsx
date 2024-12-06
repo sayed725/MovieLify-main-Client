@@ -28,7 +28,7 @@ const Movies = ({movie}) => {
               case "sci-fi":
                 return "bg-[#1691ba]";
               case "horror":
-                return "bg-[#1b1d24]";
+                return "bg-red-600";
               case "romance":
                 return "bg-[#fa5a9a]";
               case "triller":
@@ -57,7 +57,7 @@ const Movies = ({movie}) => {
               {/* Overlay */}
               <div className="absolute inset-0 bg-black bg-opacity-70 flex flex-col justify-center items-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
                 <Link
-                  to={`/movies/${movie._id}`}
+                  to={`/movie/${movie._id}`}
                   className="px-6 py-2 bg-[#ff4545] text-white rounded-full text-sm font-medium hover:bg-red-600 transition-colors"
                 >
                   See Details
