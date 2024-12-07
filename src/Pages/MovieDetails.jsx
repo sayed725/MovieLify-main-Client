@@ -1,9 +1,9 @@
 import React from 'react';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData } from 'react-router-dom';
 import { FaStar, FaHeart } from "react-icons/fa";
 import { IoTrashBin } from "react-icons/io5";
 import { FaRegCirclePlay } from "react-icons/fa6";
-import { HiOutlineTicket } from "react-icons/hi2";
+import { MdSystemUpdateAlt } from "react-icons/md";
 
 
 const MovieDetails = () => {
@@ -106,10 +106,13 @@ const MovieDetails = () => {
         <h2 className=' text-[#a4ba16]'>Short Summary  : <br /> <span className='text-white'>{summary}</span></h2>
         <h2 className='text-[#a4ba16]'>Released Year : <span className='text-white'>{year}.</span></h2>
         <h2 className='text-[#a4ba16]'>Duration : <span className='text-white'>{duration}  Minutes.</span></h2>
-       <div className='flex gap-5 sm:gap-10'>
+       <div className='flex flex-col sm:flex-row gap-10'>
        <button className='btn text-white text-xl border-none hover:text-black hover:bg-[#ff4545] bg-[#ff4545]'> <FaRegCirclePlay /> Watch Trailer</button>
-       <button className='btn text-white  text-xl border-none hover:text-black hover:bg-[#a4ba16] bg-[#a4ba16]'> <HiOutlineTicket /> Buy Tickets</button>
+       <Link to={`/updatemovies/${_id}`}
+        className='btn text-white  text-xl border-none hover:text-black hover:bg-[#a4ba16] bg-[#a4ba16]'> <MdSystemUpdateAlt /> Update Details</Link>
+       
        </div>
+      
      </div>
     </div>
         </div>

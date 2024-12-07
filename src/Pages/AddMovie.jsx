@@ -159,7 +159,7 @@ const AddMovie = () => {
                 <span className="label-text">Select Genre:</span>
               </label>
               <select name="genre" className="input input-bordered" required>
-                <option value="">-- Select Year --</option>
+                <option value="">-- Select Genre --</option>
                 {genres.map((genre) => (
                   <option key={genre} value={genre}>
                     {genre}

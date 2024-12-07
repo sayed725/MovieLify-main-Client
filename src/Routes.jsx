@@ -10,6 +10,7 @@ import MyFavourites from "./Pages/MyFavourites";
 import About from "./Pages/About";
 import ShowMovies from "./components/ShowMovies";
 import MovieDetails from "./Pages/MovieDetails";
+import UpdateMovie from "./Pages/UpdateMovie";
 
 
 
@@ -39,10 +40,14 @@ const router = createBrowserRouter([
             element: <MovieDetails></MovieDetails>,
             loader:({params})=>fetch(`http://localhost:5001/movie/${params.id}`)
         },
-
         {
             path:'/addmovies',
             element: <AddMovie></AddMovie>
+        },
+        {
+            path:'/updatemovies/:id',
+            element: <UpdateMovie></UpdateMovie>,
+            loader:({params})=>fetch(`http://localhost:5001/movie/${params.id}`)
         },
         {
             path:'/favorites',
