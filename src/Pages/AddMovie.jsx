@@ -86,7 +86,7 @@ const AddMovie = () => {
       name,
       email,
     };
-    console.log(newMovie);
+    // console.log(newMovie);
 
     // send data to the server
     fetch('http://localhost:5001/movie',{
@@ -99,7 +99,7 @@ const AddMovie = () => {
 
     .then(res => res.json())
     .then(data =>{
-        console.log(data)
+        // console.log(data)
         if(data.insertedId){
             Swal.fire({
                 title: 'Success!',

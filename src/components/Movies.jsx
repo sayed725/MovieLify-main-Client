@@ -2,8 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { AiFillStar } from "react-icons/ai"; 
 import { FaRegCirclePlay } from "react-icons/fa6";
+import Loading from "../Pages/Loading";
 
 const Movies = ({movie}) => {
+
   
     const { poster,
         title,
@@ -15,6 +17,7 @@ const Movies = ({movie}) => {
         summary,
         name,
         email,} = movie
+
 
 
         const getGenreColor = (genre) => {
@@ -40,7 +43,7 @@ const Movies = ({movie}) => {
 
 
   return (
-    <div className="bg-[#1b1d24] text-white py-10">
+    <div className=" text-white py-10">
       <div className="container mx-auto px-4">
         <div className="">
             <div

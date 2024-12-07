@@ -53,7 +53,8 @@ const router = createBrowserRouter([
         },
         {
             path:'/favorites',
-            element: <MyFavourites></MyFavourites>
+            element: <MyFavourites></MyFavourites>,
+            loader: ()=> fetch ('http://localhost:5001/favoritelist'),
         },
         {
             path:'/contract',
