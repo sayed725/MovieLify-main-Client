@@ -7,10 +7,10 @@ import Login from "./Pages/Login";
 import AllMovies from "./Pages/AllMovies";
 import AddMovie from "./Pages/AddMovie";
 import MyFavourites from "./Pages/MyFavourites";
-import About from "./Pages/About";
 import ShowMovies from "./components/ShowMovies";
 import MovieDetails from "./Pages/MovieDetails";
 import UpdateMovie from "./Pages/UpdateMovie";
+import Contract from "./Pages/Contract";
 
 
 
@@ -23,7 +23,7 @@ const router = createBrowserRouter([
         {
             path:'/',
             element: <Home></Home>,
-            loader: ()=> fetch ('http://localhost:5001/movie'),
+            loader: ()=> fetch ('http://localhost:5001/sortedmovie'),
             children:[
                 {
                     path:"/",
@@ -33,7 +33,9 @@ const router = createBrowserRouter([
         },
         {
             path:'/allmovies',
-            element: <AllMovies></AllMovies>
+            element: <AllMovies></AllMovies>,
+            loader: ()=> fetch ('http://localhost:5001/movie'),
+
         },
         {
             path:'/movie/:id',
@@ -54,8 +56,8 @@ const router = createBrowserRouter([
             element: <MyFavourites></MyFavourites>
         },
         {
-            path:'/about',
-            element: <About></About>
+            path:'/contract',
+            element: <Contract></Contract>
         },
         {
             path:'/register',

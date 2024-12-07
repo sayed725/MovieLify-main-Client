@@ -1,13 +1,15 @@
 import React from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData, useNavigate } from 'react-router-dom';
 import { FaStar, FaHeart } from "react-icons/fa";
 import { IoTrashBin } from "react-icons/io5";
 import { FaRegCirclePlay } from "react-icons/fa6";
 import { MdSystemUpdateAlt } from "react-icons/md";
+import Swal from 'sweetalert2';
 
 
 const MovieDetails = () => {
     const movie = useLoaderData()
+    const navigate = useNavigate()
     const { poster,title,genre,duration,year,_id,rating,summary,name,email} = movie
 
 
@@ -31,6 +33,47 @@ const MovieDetails = () => {
             return "bg-[#1691ba]";
         }
       };
+
+      const handleDelete = id=>{
+        Swal.fire({
+            title: "Are you sure?",
+            text: "You won't be able to revert this!",
+            icon: "warning",
+            showCancelButton: true,
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            confirmButtonText: "Yes, delete it!"
+        }).then((result) => {
+            if (result.isConfirmed) {
+
+
+                // delete from the database
+                fetch(`http://localhost:5001/movie/${id}`, {
+                    method: 'DELETE'
+                })
+                    .then(res => res.json())
+                    .then(data => {
+                        if (data.deletedCount) {
+                            Swal.fire({
+                                title: "Deleted!",
+                                text: "Your file has been deleted.",
+                                icon: "success"
+                            });
+
+                           navigate("/")
+                        }
+                    })
+            }
+        });
+
+      }
+
+      const handleFavorite = id=>{
+        console.log('items added to favorite', id)
+    }
+
+
+
 
     return (
         <div className="mx-auto lg:py-[70px] bg-[#1b1d24] lg:px-10 text-white">
@@ -57,11 +100,13 @@ const MovieDetails = () => {
 
       {/* Buttons */}
       <div className="flex gap-4 sm:gap-10 my-10">
-        <button className="flex items-center gap-2 hover:text-[#ff4545] text-[#a4ba16]">
+        <button onClick={()=>handleFavorite(_id)}
+        className="flex items-center gap-2 hover:text-[#ff4545] text-[#a4ba16]">
           <FaHeart className='text-5xl border-2 p-2 hover:border-[#ff4545] border-[#a4ba16] rounded-full' />
           <span className="font-semibold text-2xl">Add to Favorite</span>
         </button>
-        <button className="flex items-center gap-2 hover:text-[#ff4545] text-[#a4ba16]">
+        <button onClick={()=>handleDelete(_id)} 
+        className="flex items-center gap-2 hover:text-[#ff4545] text-[#a4ba16]">
         <IoTrashBin className='text-5xl border-2 p-2 hover:border-[#ff4545] border-[#a4ba16] rounded-full' />
           <span className="font-semibold text-2xl">Delete</span>
         </button>
