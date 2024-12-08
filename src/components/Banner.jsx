@@ -3,6 +3,7 @@ import { Navigation, Autoplay, Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/navigation";
 import { FaRegCirclePlay } from "react-icons/fa6";
+import 'animate.css';
 
 
 const Banner = () => {
@@ -30,14 +31,14 @@ const Banner = () => {
           >
             <div className="flex justify-center items-center gap-3 lg:gap-5 py-5" >
                 <div>
-                <FaRegCirclePlay className="text-7xl lg:text-9xl text-[#ff4545] hover:text-white" />
+                <FaRegCirclePlay className="text-7xl lg:text-9xl text-[#ff4545] hover:text-white animate__flash animate__animated animate__repeat-3" />
                 </div>
            <div className="">
-           <h1 className=" text-2xl lg:text-4xl font-bold">
+           <h1 className=" text-2xl lg:text-4xl font-bold animate__animated animate__slideInDown">
            Avatar: The Way of Water
 
             </h1>
-            <p className="text-xl py-2">
+            <p className="text-xl py-2 animate__slideInUp animate__animated">
              View Trailer
             </p>
            
@@ -56,13 +57,13 @@ const Banner = () => {
           >
            <div className="flex justify-center items-center gap-3 lg:gap-5 py-5" >
                 <div>
-                <FaRegCirclePlay className="text-7xl lg:text-9xl text-[#ff4545] hover:text-white" />
+                <FaRegCirclePlay className="text-7xl lg:text-9xl text-[#ff4545] hover:text-white animate__flash animate__animated animate__repeat-3" />
                 </div>
            <div className="">
-           <h1 className=" text-2xl lg:text-4xl font-bold">
+           <h1 className=" text-2xl lg:text-4xl font-bold animate__animated animate__slideInDown">
            Interstellar
             </h1>
-            <p className="text-xl py-2">
+            <p className="text-xl py-2 animate__slideInUp animate__animated">
              View Trailer
             </p>
            
@@ -81,13 +82,13 @@ const Banner = () => {
             
             <div className="flex justify-center items-center gap-3 lg:gap-5 py-5" >
                 <div>
-                <FaRegCirclePlay className="text-7xl lg:text-9xl text-[#ff4545] hover:text-white" />
+                <FaRegCirclePlay className="text-7xl lg:text-9xl text-[#ff4545] hover:text-white animate__flash animate__animated animate__repeat-3" />
                 </div>
            <div className="">
-           <h1 className=" text-2xl lg:text-4xl font-bold">
+           <h1 className=" text-2xl lg:text-4xl font-bold animate__animated animate__slideInDown">
            Avengers: Endgame
             </h1>
-            <p className="text-xl py-2">
+            <p className="text-xl py-2 animate__slideInUp animate__animated">
              View Trailer
             </p>
            </div>
@@ -104,13 +105,13 @@ const Banner = () => {
           >
            <div className="flex justify-center items-center gap-3 lg:gap-5 py-5" >
                 <div>
-                <FaRegCirclePlay className="text-7xl lg:text-9xl text-[#ff4545] hover:text-white" />
+                <FaRegCirclePlay className="text-7xl lg:text-9xl text-[#ff4545] hover:text-white animate__flash animate__animated animate__repeat-3" />
                 </div>
            <div className="">
-           <h1 className="text-2xl lg:text-4xl font-bold">
+           <h1 className="text-2xl lg:text-4xl font-bold animate__animated animate__slideInDown">
            Justice League
             </h1>
-            <p className="text-xl py-2">
+            <p className="text-xl py-2 animate__slideInUp animate__animated">
              View Trailer
             </p>
            </div>

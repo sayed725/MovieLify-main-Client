@@ -15,7 +15,7 @@ const Contact = () => {
      <div className="flex flex-col md:flex-row gap-10 items-center justify-center p-6 sm:px-[100px] lg:px-[200px]">
       {/* Left Section */}
       <div className="w-full flex flex-col gap-5">
-      <h2 className="text-4xl font-bold mb-4">GET IN TOUCH</h2>
+      <h2 className="text-4xl font-bold mb-4 animate__fadeInLeft animate__animated">GET IN TOUCH</h2>
         <p className="text-gray-600 mb-6">
         We’d love to hear from you! Whether you have a question or just want to <br />
         get in touch, feel free to drop us a message.
@@ -29,7 +29,7 @@ const Contact = () => {
             </div>
           </div>
           <div className="flex items-center">
-            <FaPhoneAlt className="text-red-500 text-xl mr-4" />
+            <FaPhoneAlt className="text-red-500 text-xl mr-4 animate__shakeX animate__animated " />
             <div>
               <h3 className="font-bold">PHONE</h3>
               <p>(123) 456 - 7890</p>

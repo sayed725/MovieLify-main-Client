@@ -83,7 +83,7 @@ const MyFavourites = () => {
     <div className="my-10">
          <Helmet><title>Movielify | My Favorite</title></Helmet>
       <div className="">
-        <h2 className="text-4xl text-center font-semibold">
+        <h2 className="text-4xl text-center font-semibold animate__fadeInRight animate__animated">
           Your Favorite Movies
         </h2>
       </div>

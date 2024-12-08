@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link, useLoaderData } from 'react-router-dom';
 import Movies from './Movies';
 import Loading from '../Pages/Loading';
+import 'animate.css';
 
 
 const ShowMovies = () => {
@@ -15,7 +16,7 @@ const ShowMovies = () => {
         }, 300);
         return ()=> clearTimeout(timer)
       },[])
-      
+
      if (showLoader) {
         return <Loading />;
       }
@@ -24,7 +25,7 @@ const ShowMovies = () => {
     return (
         <div className=''>
            <div className=''>    
-           <h2 className='text-4xl text-center font-semibold text-gray-900 dark:text-white'>Explore Iconic Movies</h2>
+           <h2 className='text-4xl text-center font-semibold text-gray-900 dark:text-white animate__fadeInLeft animate__animated'>Explore Iconic Movies</h2>
            </div>
            {/* movie card section starts  */}
 

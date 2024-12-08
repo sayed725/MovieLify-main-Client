@@ -47,12 +47,12 @@ const AllMovies = () => {
         <div className='py-10'>
              <Helmet><title>Movielify | All Movies</title></Helmet>
            <div className='flex flex-col justify-center items-center gap-10'>    
-           <h2 className='text-4xl text-center font-semibold'>Explore Iconic Movies</h2>
+           <h2 className='text-4xl text-center font-semibold animate__fadeInLeft animate__animated'>Explore Iconic Movies</h2>
            <input
                 type="text"
                 onChange={(e)=>setSearch(e.target.value)}
                 placeholder='Search Movie By Name'
-                className="input input-bordered input-error  w-[90%] sm:w-[500px] text-center bg-slate-100"
+                className="input input-bordered input-error  w-[90%] sm:w-[500px] text-center bg-slate-100 animate__headShake animate__animated"
               />
            </div>
            {/* movie card section starts  */}

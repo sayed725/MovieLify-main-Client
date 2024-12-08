@@ -86,7 +86,7 @@ const Register = () => {
         <div>
              <Helmet><title>Movielify | Register</title></Helmet>
              <div>
-                <h2 className="text-4xl my-10 text-center font-semibold  ">Register your account</h2>
+                <h2 className="text-4xl my-10 text-center font-semibold animate__fadeInRight animate__animated ">Register your account</h2>
                 <form onSubmit={handleSubmit}  className=" md:w-3/4 lg:w-1/3 mx-auto">
                 <div className="form-control">
                         <label className="label">

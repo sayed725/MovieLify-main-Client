@@ -117,12 +117,9 @@ const AddMovie = () => {
     <div className="lg:w-3/4 mx-auto">
          <Helmet><title>Movielify | Add Movies</title></Helmet>
       <div className="text-center p-10">
-        <h1 className="text-5xl font-bold">Add New Movies</h1>
+        <h1 className="text-5xl font-bold animate__fadeInLeft animate__animated">Add New Movies</h1>
         <p className="py-6">
-          It is a long established fact that a reader will be distraceted by the
-          readable content of a page when looking at its layout. The point of
-          using Lorem Ipsum is that it has a more-or-less normal distribution of
-          letters, as opposed to using Content here.
+         Please Add Some New Movies With Specific Details
         </p>
       </div>
       <div className=" bg-slate-100 w-full shrink-0">

@@ -52,7 +52,7 @@ const Trending = () => {
 
   return (
     <div className="bg-[#ff4545] py-10 px-1 sm:px-0">
-      <h2 className="text-white text-3xl text-center mb-6 font-bold">Top Movies to Enjoy in Theatres</h2>
+      <h2 className="text-white text-3xl text-center mb-6 font-bold animate__fadeInLeft animate__animated animate__delay-2s">Top Movies to Enjoy in Theatres</h2>
       <Swiper
         slidesPerView={3}
         spaceBetween={20}

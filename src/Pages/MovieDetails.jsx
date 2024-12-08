@@ -141,7 +141,7 @@ const MovieDetails = () => {
         <div className="text-white p-6">
       {/* Title and Year */}
       <div className="flex items-center justify-between">
-        <h1 className="text-4xl font-bold">
+        <h1 className="text-4xl font-bold animate__headShake animate__animated">
           {title} <span className="text-gray-500 text-xl">({year})</span>
         </h1>
       </div>
