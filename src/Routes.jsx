@@ -3,7 +3,7 @@ import MainLayout from "./MainLayout";
 import Error from "./Pages/Error";
 import Home from "./Pages/Home";
 import Register from "./Pages/Register";
-import Login from "./Pages/Login";
+// import Login from "./Pages/Login";
 import AllMovies from "./Pages/AllMovies";
 import AddMovie from "./Pages/AddMovie";
 import MyFavourites from "./Pages/MyFavourites";
@@ -11,6 +11,7 @@ import ShowMovies from "./components/ShowMovies";
 import MovieDetails from "./Pages/MovieDetails";
 import UpdateMovie from "./Pages/UpdateMovie";
 import Contract from "./Pages/Contract";
+import Login from "./Pages/LoginForm";
 
 
 

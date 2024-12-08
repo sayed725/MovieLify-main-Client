@@ -9,6 +9,9 @@ const MyFavourites = () => {
 
   const [movies, setMovies] = useState([]);
 
+  const [showLoader, setShowLoader] = useState(true)
+
+
   useEffect(() => {
     if (!user?.email) return;
 
@@ -18,6 +21,8 @@ const MyFavourites = () => {
         const favoriteMovies = data.map((item) => item.favoriteMovie);
 
         setMovies(favoriteMovies);
+        setShowLoader(false)
+       
       })
       .catch((error) => {
         console.error("Error fetching favorite movies:", error);
@@ -30,6 +35,9 @@ const MyFavourites = () => {
 
   if (!user) {
     return <Again />;
+  }
+  if (showLoader) {
+    return <Loading />;
   }
 
   if (movies.length == 0) {

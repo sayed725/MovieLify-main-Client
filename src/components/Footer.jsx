@@ -60,12 +60,12 @@ const Footer = () => {
         <div className="mb-6 md:w-1/4">
           <h3 className="text-lg font-bold mb-4 text-red-600">Instagram Feed</h3>
           <div className="grid grid-cols-3 gap-2">
-            <div className="bg-gray-600 h-16 w-full"><img className="h-[64px] w-[115px] object-cover rounded-md" src="/dhaka1-1024x682.jpg" alt="" /></div>
-            <div className="bg-gray-600 h-16 w-full"><img className="h-[64px] w-[115px] object-cover rounded-md" src="/khulna.jpg" alt="" /></div>
-            <div className="bg-gray-600 h-16 w-full"><img className="h-[64px] w-[115px] object-cover rounded-md" src="/sylet.webp" alt="" /></div>
-            <div className="bg-gray-600 h-16 w-full"><img className="h-[64px] w-[115px] object-cover rounded-md" src="/barisal.jpg" alt="" /></div>
-            <div className="bg-gray-600 h-16 w-full"><img className="h-[64px] w-[115px] object-cover rounded-md" src="/chittagong.webp" alt="" /></div>
-            <div className="bg-gray-600 h-16 w-full"><img className="h-[64px] w-[115px] object-cover rounded-md" src="/rajshahi.jpg" alt="" /></div>
+            <div className="bg-gray-600 h-16 w-full"><img className="h-[64px] w-[115px] object-cover rounded-md" src="/t-1.webp" alt="" /></div>
+            <div className="bg-gray-600 h-16 w-full"><img className="h-[64px] w-[115px] object-cover rounded-md" src="/t-2.jpg" alt="" /></div>
+            <div className="bg-gray-600 h-16 w-full"><img className="h-[64px] w-[115px] object-cover rounded-md" src="/t-3.jpg" alt="" /></div>
+            <div className="bg-gray-600 h-16 w-full"><img className="h-[64px] w-[115px] object-cover rounded-md" src="/t-4.jpg" alt="" /></div>
+            <div className="bg-gray-600 h-16 w-full"><img className="h-[64px] w-[115px] object-cover rounded-md" src="/t-5.jpg" alt="" /></div>
+            <div className="bg-gray-600 h-16 w-full"><img className="h-[64px] w-[115px] object-cover rounded-md" src="/t-6.avif" alt="" /></div>
            
           </div>
         </div>

@@ -7,11 +7,22 @@ import { AuthContext } from '../Porvider/AuthProvider';
 const AllMovies = () => {
     const { user, loading }= useContext(AuthContext)
 
+    const [showLoader, setShowLoader] = useState(true)
+
+    
     const allData = useLoaderData()
     const [search, setSearch] = useState("")
     // console.log(search)
 
-    const [movies , setMovies] = useState(allData)
+
+    useEffect(()=>{
+       setMovies(allData)
+       setShowLoader(false)
+    },[allData])
+
+    const [movies , setMovies] = useState()
+
+
 
 
     useEffect(()=>{
@@ -19,10 +30,13 @@ const AllMovies = () => {
         fetch(`http://localhost:5001/movie?searchParams=${search}`)
          .then((res)=> res.json())
          .then((data)=> setMovies(data))
-
+        
     },[search])
 
-    if (loading) {
+    // if (loading) {
+    //     return <Loading />;
+    //   }
+    if (showLoader) {
         return <Loading />;
       }
 
