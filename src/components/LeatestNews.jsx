@@ -17,7 +17,7 @@ function LeatestNews() {
         <div className="col-span-1 md:col-span-2 lg:col-span-2 row-span-2">
           <div className="relative h-full">
             <img
-              src="/public/news-1.jpeg"
+              src="/news-1.jpeg"
               alt='img'
               className="w-full object-cover h-[500px] filter brightness-75 hover:brightness-90 rounded-md"
             />
