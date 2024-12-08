@@ -71,22 +71,41 @@ const MovieDetails = () => {
       }
 
       const handleFavorite = favoriteMovie =>{
+
+         favoriteMovie = {
+            poster,
+            title,
+            genre,
+            duration,
+            year,
+            rating,
+            summary,
+          };
+           const userEmail = user.email
+           const userName = user.displayName
+
+          const favMovie = { poster,
+            title,
+            genre,
+            duration,
+            year,
+            rating,
+            summary,
+            userEmail,
+            userName,
+        }
         
         fetch('http://localhost:5001/favoritelist',{
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'
             },
-            body: JSON.stringify({
-                favoriteMovie,
-                userEmail: user.email,
-                userName: user.displayName,
-            })
+            body: JSON.stringify(favMovie)
         })
     
         .then(res => res.json())
         .then(data =>{
-            console.log(data)
+            // console.log(data)
             if(data.insertedId){
                 Swal.fire({
                     title: 'Success!',

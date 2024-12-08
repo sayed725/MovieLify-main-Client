@@ -11,12 +11,7 @@ const Register = () => {
 
     const location = useLocation()
 
-    // useEffect(()=>{
-
-    //     if(location.pathname == "/auth/register"){
-    //         document.title = "Register-GreenEdventures"
-    //     }
-    // },[])
+   
 
     const navigate = useNavigate()
 
@@ -89,35 +84,35 @@ const Register = () => {
     return (
         <div>
              <div>
-                <h2 className="text-4xl my-10 text-center font-semibold text-green-600 ">Register your account</h2>
+                <h2 className="text-4xl my-10 text-center font-semibold  ">Register your account</h2>
                 <form onSubmit={handleSubmit}  className=" md:w-3/4 lg:w-1/3 mx-auto">
                 <div className="form-control">
                         <label className="label">
-                            <span className="label-text text-green-600">Your Name</span>
+                            <span className="label-text">Your Name</span>
                         </label>
                         <input type="text" required name="name" placeholder="Name" className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text text-green-600">Photo URL</span>
+                            <span className="label-text">Photo URL</span>
                         </label>
                         <input type="text" required name="photo" placeholder="Photo URL" className="input input-bordered" />
                     </div>
                     <div className="form-control">
                         <label className="label">
-                            <span className="label-text text-green-600">Email address</span>
+                            <span className="label-text">Email address</span>
                         </label>
                         <input type="email" required name="email" placeholder="Email" className="input input-bordered" />
                     </div>
                     <div className="form-control relative">
                         <label className="label">
-                            <span className="label-text text-green-600">Password</span>
+                            <span className="label-text">Password</span>
                         </label>
                         <input type={showPassword?"text":"password"} required name="password" placeholder="Password" className="input input-bordered" />
 
                         <span
                         onClick={() => setShowPassword(!showPassword)}
-                        className='absolute right-5 top-[52px] text-xl text-green-600'>
+                        className='absolute right-5 top-[52px] text-xl'>
                         {
                             showPassword ? <FaEye></FaEye> : <FaEyeSlash></FaEyeSlash>
                         }

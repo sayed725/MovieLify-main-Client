@@ -56,14 +56,14 @@ const Login = () => {
   return (
     <div>
       <div>
-        <h2 className="text-4xl my-10 text-center text-green-600 font-semibold">
+        <h2 className="text-4xl my-10 text-center  font-semibold">
           Login to your account
         </h2>
         <form onSubmit={handleSubmit(handleLogIn)} className="md:w-3/4 lg:w-1/3 mx-auto">
           {/* Email Field */}
           <div className="form-control">
             <label className="label">
-              <span className="label-text text-green-600">Email address</span>
+              <span className="label-text ">Email address</span>
             </label>
             <input
               type="email"
@@ -81,7 +81,7 @@ const Login = () => {
           {/* Password Field */}
           <div className="form-control relative">
             <label className="label">
-              <span className="label-text text-green-600">Password</span>
+              <span className="label-text">Password</span>
             </label>
             <input
               type={showPassword ? "text" : "password"}
@@ -96,7 +96,7 @@ const Login = () => {
             )}
             <span
               onClick={() => setShowPassword(!showPassword)}
-              className="absolute right-5 top-[52px] text-xl text-green-600 cursor-pointer"
+              className="absolute right-5 top-[52px] text-xl cursor-pointer"
             >
               {showPassword ? <FaEye /> : <FaEyeSlash />}
             </span>
@@ -109,7 +109,7 @@ const Login = () => {
           <label className="label">
             <Link
             //   onClick={handleForgotPassword}
-              className="label-text-alt link link-hover text-green-600"
+              className="label-text-alt link link-hover"
             >
               Forgot password?
             </Link>

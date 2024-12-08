@@ -15,39 +15,39 @@ const Trending = () => {
       title: "Gladiator",
       genre: "Action",
       rating: 7,
-      image: "/t-1.webp", // Replace with your image URLs
+      image: "/t-1.webp",
     },
     {
       title: "Moana 2",
       genre: "Adventure",
       rating: 6,
-      image: "/t-2.jpg", // Replace with your image URLs
+      image: "/t-2.jpg",
     },
     {
       title: "Wicked",
       genre: "Romance",
       rating: 9,
-      image: "/t-3.jpg", // Replace with your image URLs
+      image: "/t-3.jpg",
     },
     {
       title: "Deadpool & Wolverine",
       genre: "Action",
       rating: 9,
-      image: "/t-4.jpg", // Replace with your image URLs
+      image: "/t-4.jpg",
     },
     {
       title: "Alien: Romulus",
       genre: "Sci-Fi",
       rating: 6,
-      image: "/t-5.jpg", // Replace with your image URLs
+      image: "/t-5.jpg",
     },
     {
       title: "Twisters",
       genre: "Triller",
       rating: 8,
-      image: "/t-6.avif", // Replace with your image URLs
+      image: "/t-6.avif",
     },
-    // Add more movies here
+    
   ];
 
   return (

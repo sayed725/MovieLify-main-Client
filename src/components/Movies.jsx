@@ -2,7 +2,6 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { AiFillStar } from "react-icons/ai"; 
 import { FaRegCirclePlay } from "react-icons/fa6";
-import Loading from "../Pages/Loading";
 
 const Movies = ({movie}) => {
 

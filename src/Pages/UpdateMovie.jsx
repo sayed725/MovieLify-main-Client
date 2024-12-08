@@ -93,7 +93,7 @@ const UpdateMovie = () => {
       name,
       email,
     };
-    console.log(updatedMovie);
+    // console.log(updatedMovie);
 
     // send data to the server 
     fetch(`http://localhost:5001/movie/${_id}`,{
@@ -106,7 +106,7 @@ const UpdateMovie = () => {
 
     .then(res => res.json())
     .then(data =>{
-        console.log(data)
+        // console.log(data)
         if(data.modifiedCount > 0){
             Swal.fire({
                 title: 'Success!',
