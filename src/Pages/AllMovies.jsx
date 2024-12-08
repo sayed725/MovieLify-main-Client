@@ -1,11 +1,30 @@
-import React, { useState } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Movies from '../components/Movies';
+import Loading from './Loading';
+import { AuthContext } from '../Porvider/AuthProvider';
 
 const AllMovies = () => {
+    const { user, loading }= useContext(AuthContext)
+
     const allData = useLoaderData()
     const [search, setSearch] = useState("")
-    console.log(search)
+    // console.log(search)
+
+    const [movies , setMovies] = useState(allData)
+
+
+    useEffect(()=>{
+     
+        fetch(`http://localhost:5001/movie?searchParams=${search}`)
+         .then((res)=> res.json())
+         .then((data)=> setMovies(data))
+
+    },[search])
+
+    if (loading) {
+        return <Loading />;
+      }
 
     return (
         <div className='bg-[#1b1d24]'>
@@ -22,7 +41,7 @@ const AllMovies = () => {
 
            <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:px-12 mt-10'>
             {
-                allData.map(movie=><Movies key={movie._id} movie={movie}></Movies>)
+                movies.map(movie=><Movies key={movie._id} movie={movie}></Movies>)
             }
            </div>
         </div>

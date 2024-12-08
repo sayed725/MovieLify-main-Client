@@ -11,7 +11,7 @@ const ShowMovies = () => {
     return (
         <div className=''>
            <div className=''>    
-           <h2 className='text-4xl text-center font-semibold text-white'>Explore Iconic Movies</h2>
+           <h2 className='text-4xl text-center font-semibold text-gray-900 dark:text-white'>Explore Iconic Movies</h2>
            </div>
            {/* movie card section starts  */}
 

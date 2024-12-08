@@ -7,8 +7,8 @@ function LeatestNews() {
     <div className="mx-auto p-6">
       {/* Header */}
       <div className="flex flex-col gap-5 pb-10">
-        <h2 className="text-3xl font-bold text-gray-900 text-center">Latest News of HollyWood</h2>
-        <p className="text-gray-600 text-sm text-center">Stay tuned for all the latest entertainment news and TV premieres</p>
+        <h2 className="text-3xl font-bold text-gray-900 dark:text-white text-center">Latest News of HollyWood</h2>
+        <p className="text-gray-600 dark:text-white text-sm text-center">Stay tuned for all the latest entertainment news and TV premieres</p>
       </div>
 
       {/* News Grid */}

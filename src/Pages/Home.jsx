@@ -3,14 +3,18 @@ import Banner from '../components/Banner';
 import ShowMovies from '../components/ShowMovies';
 import LeatestNews from '../components/LeatestNews';
 import Trending from '../components/Trending';
+import Darkmode from '../components/Darkmode';
 
 const Home = () => {
     return (
-        <div>
+        <div className='dark:bg-[#1b1d24]'>
+            <div>
+                <Darkmode></Darkmode>
+            </div>
            <div>
            <Banner></Banner>
            </div>
-           <div className=' bg-[#1b1d24] py-5 sm:py-[50px]'>
+           <div className='py-5 sm:py-[50px]'>
             <ShowMovies></ShowMovies>
            </div>
            <div className='py-5 sm:py-[50px]'>
