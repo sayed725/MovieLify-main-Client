@@ -3,6 +3,7 @@ import { useLoaderData } from 'react-router-dom';
 import Movies from '../components/Movies';
 import Loading from './Loading';
 import { AuthContext } from '../Porvider/AuthProvider';
+import { Helmet } from 'react-helmet-async';
 
 const AllMovies = () => {
     const { user, loading }= useContext(AuthContext)
@@ -29,7 +30,7 @@ const AllMovies = () => {
 
     useEffect(()=>{
      
-        fetch(`http://localhost:5001/movie?searchParams=${search}`)
+        fetch(`https://a-10-movielify-server.vercel.app/movie?searchParams=${search}`)
          .then((res)=> res.json())
          .then((data)=> setMovies(data))
         
@@ -44,6 +45,7 @@ const AllMovies = () => {
 
     return (
         <div className='py-10'>
+             <Helmet><title>Movielify | All Movies</title></Helmet>
            <div className='flex flex-col justify-center items-center gap-10'>    
            <h2 className='text-4xl text-center font-semibold'>Explore Iconic Movies</h2>
            <input

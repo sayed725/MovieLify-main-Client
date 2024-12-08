@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
 
 const Contact = () => {
@@ -9,6 +10,7 @@ const Contact = () => {
 
   return (
    <div className="py-[50px]">
+     <Helmet><title>Movielify | Contacts</title></Helmet>
      
      <div className="flex flex-col md:flex-row gap-10 items-center justify-center p-6 sm:px-[100px] lg:px-[200px]">
       {/* Left Section */}

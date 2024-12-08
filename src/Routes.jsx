@@ -24,7 +24,7 @@ const router = createBrowserRouter([
         {
             path:'/',
             element: <Home></Home>,
-            loader: ()=> fetch ('http://localhost:5001/sortedmovie'),
+            loader: ()=> fetch ('https://a-10-movielify-server.vercel.app/sortedmovie'),
             children:[
                 {
                     path:"/",
@@ -35,13 +35,13 @@ const router = createBrowserRouter([
         {
             path:'/allmovies',
             element: <AllMovies></AllMovies>,
-            loader: ()=> fetch ('http://localhost:5001/movie'),
+            loader: ()=> fetch ('https://a-10-movielify-server.vercel.app/movie'),
 
         },
         {
             path:'/movie/:id',
             element: <PrivateRoute><MovieDetails></MovieDetails></PrivateRoute>,
-            loader:({params})=>fetch(`http://localhost:5001/movie/${params.id}`)
+            loader:({params})=>fetch(`https://a-10-movielify-server.vercel.app/movie/${params.id}`)
         },
         {
             path:'/addmovies',
@@ -50,7 +50,7 @@ const router = createBrowserRouter([
         {
             path:'/updatemovies/:id',
             element: <PrivateRoute><UpdateMovie></UpdateMovie></PrivateRoute>,
-            loader:({params})=>fetch(`http://localhost:5001/movie/${params.id}`)
+            loader:({params})=>fetch(`https://a-10-movielify-server.vercel.app/movie/${params.id}`)
         },
         {
             path:'/favorites',

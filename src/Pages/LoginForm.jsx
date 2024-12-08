@@ -4,6 +4,7 @@ import { useLocation, useNavigate, Link } from "react-router-dom";
 import { FaEye, FaEyeSlash, FaGoogle } from "react-icons/fa";
 import { toast } from "react-toastify";
 import { AuthContext } from "../Porvider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 
 const Login = () => {
@@ -55,6 +56,7 @@ const Login = () => {
 
   return (
     <div>
+         <Helmet><title>Movielify | Login</title></Helmet>
       <div>
         <h2 className="text-4xl my-10 text-center  font-semibold">
           Login to your account

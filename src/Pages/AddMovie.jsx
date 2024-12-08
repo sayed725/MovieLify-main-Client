@@ -3,6 +3,7 @@ import Swal from "sweetalert2";
 
 import ReactStars from "react-rating-stars-component";
 import { AuthContext } from "../Porvider/AuthProvider";
+import { Helmet } from "react-helmet-async";
 
 const AddMovie = () => {
   const { user } = useContext(AuthContext);
@@ -89,7 +90,7 @@ const AddMovie = () => {
     // console.log(newMovie);
 
     // send data to the server
-    fetch('http://localhost:5001/movie',{
+    fetch('https://a-10-movielify-server.vercel.app/movie',{
         method: 'POST',
         headers: {
             'content-type' : 'application/json'
@@ -114,6 +115,7 @@ const AddMovie = () => {
 
   return (
     <div className="lg:w-3/4 mx-auto">
+         <Helmet><title>Movielify | Add Movies</title></Helmet>
       <div className="text-center p-10">
         <h1 className="text-5xl font-bold">Add New Movies</h1>
         <p className="py-6">

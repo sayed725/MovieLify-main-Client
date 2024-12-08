@@ -5,6 +5,7 @@ import Loading from "./Loading";
 import Again from "../components/Again";
 import FMovies from "./FMovie";
 import Swal from "sweetalert2";
+import { Helmet } from "react-helmet-async";
 
 const MyFavourites = () => {
   const { user, loading } = useContext(AuthContext);
@@ -18,7 +19,7 @@ const MyFavourites = () => {
   useEffect(() => {
     if (!user?.email) return;
 
-    fetch(`http://localhost:5001/favorite/${user.email}`)
+    fetch(`https://a-10-movielify-server.vercel.app/favorite/${user.email}`)
       .then((res) => res.json())
       .then((data) => {
          
@@ -37,7 +38,7 @@ const MyFavourites = () => {
   const handleDelete =(id)=>{
     console.log('delete', id)
     // delete from the database
-    fetch(`http://localhost:5001/favorite/${id}`, {
+    fetch(`https://a-10-movielify-server.vercel.app/favorite/${id}`, {
         method: 'DELETE'
     })
         .then(res => res.json())
@@ -80,6 +81,7 @@ const MyFavourites = () => {
 
   return (
     <div className="my-10">
+         <Helmet><title>Movielify | My Favorite</title></Helmet>
       <div className="">
         <h2 className="text-4xl text-center font-semibold">
           Your Favorite Movies

@@ -6,6 +6,7 @@ import { FaRegCirclePlay } from "react-icons/fa6";
 import { MdSystemUpdateAlt } from "react-icons/md";
 import Swal from 'sweetalert2';
 import { AuthContext } from '../Porvider/AuthProvider';
+import { Helmet } from 'react-helmet-async';
 
 
 const MovieDetails = () => {
@@ -50,7 +51,7 @@ const MovieDetails = () => {
 
 
                 // delete from the database
-                fetch(`http://localhost:5001/movie/${id}`, {
+                fetch(`https://a-10-movielify-server.vercel.app/movie/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -95,7 +96,7 @@ const MovieDetails = () => {
             userName,
         }
         
-        fetch('http://localhost:5001/favoritelist',{
+        fetch('https://a-10-movielify-server.vercel.app/favoritelist',{
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'
@@ -123,6 +124,7 @@ const MovieDetails = () => {
 
     return (
         <div className="mx-auto lg:py-[70px] bg-[#1b1d24] lg:px-10 text-white">
+             <Helmet><title>Movielify | Movie Details</title></Helmet>
       <div className="lg:flex lg:flex-row items-center md:items-start gap-[60px]">
         {/* Poster */}
      

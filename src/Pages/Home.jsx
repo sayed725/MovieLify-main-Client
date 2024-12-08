@@ -4,10 +4,14 @@ import ShowMovies from '../components/ShowMovies';
 import LeatestNews from '../components/LeatestNews';
 import Trending from '../components/Trending';
 import Darkmode from '../components/Darkmode';
+import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
     return (
         <div className='dark:bg-[#1b1d24]'>
+
+            
+            <Helmet><title>Movielify | Home</title></Helmet>
             <div>
                 <Darkmode></Darkmode>
             </div>

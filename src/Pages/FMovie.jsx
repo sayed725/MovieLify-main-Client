@@ -63,7 +63,7 @@ const FMovies = ({ movie, handleDelete }) => {
 
             {/* Movie Info */}
            
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center h-[175px]">
               <div className="text-red-500 px-2 py-5 rounded-md">
                 <p
                   className={` ${getGenreColor(

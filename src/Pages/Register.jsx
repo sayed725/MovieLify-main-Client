@@ -4,6 +4,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { FaEye, FaEyeSlash , FaGoogle} from 'react-icons/fa';
 import { toast, ToastContainer } from 'react-toastify';
 import { AuthContext } from '../Porvider/AuthProvider';
+import { Helmet } from 'react-helmet-async';
 
 
 
@@ -83,6 +84,7 @@ const Register = () => {
 
     return (
         <div>
+             <Helmet><title>Movielify | Register</title></Helmet>
              <div>
                 <h2 className="text-4xl my-10 text-center font-semibold  ">Register your account</h2>
                 <form onSubmit={handleSubmit}  className=" md:w-3/4 lg:w-1/3 mx-auto">

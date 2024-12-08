@@ -4,6 +4,7 @@ import Swal from "sweetalert2";
 import ReactStars from "react-rating-stars-component";
 import { AuthContext } from "../Porvider/AuthProvider";
 import { useLoaderData } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
 
 const UpdateMovie = () => {
 
@@ -96,7 +97,7 @@ const UpdateMovie = () => {
     // console.log(updatedMovie);
 
     // send data to the server 
-    fetch(`http://localhost:5001/movie/${_id}`,{
+    fetch(`https://a-10-movielify-server.vercel.app/movie/${_id}`,{
         method: 'PUT',
         headers: {
             'content-type' : 'application/json'
@@ -120,6 +121,7 @@ const UpdateMovie = () => {
 
   return (
     <div className="lg:w-3/4 mx-auto">
+         <Helmet><title>Movielify | Update Movie</title></Helmet>
       <div className="text-center p-10">
         <h1 className="text-5xl font-bold">Update This Movie</h1>
     

@@ -1,9 +1,11 @@
 import React from 'react';
+import { Helmet } from 'react-helmet-async';
 import { Link } from 'react-router-dom';
 
 const Error = () => {
     return (
         <div className='flex justify-center items-center gap-10 flex-col mt-[100px]'>
+             <Helmet><title>Movielify | Error</title></Helmet>
             <h1 className='text-5xl text-center'>Error</h1>
             <p className='text-5xl text-center'>404</p>
             <p className='text-5xl text-center'> Not Found </p>
