@@ -8,12 +8,14 @@ const ShowMovies = () => {
    
     const allData = useLoaderData()
     const [showLoader, setShowLoader] = useState(true)
-    const [movies , setMovies] = useState()
+    const [movies , setMovies] = useState(allData)
     useEffect(()=>{
-        setMovies(allData)
-        setShowLoader(false)
-     },[allData])
-
+        const timer = setTimeout(() => {
+          setShowLoader(false)
+        }, 300);
+        return ()=> clearTimeout(timer)
+      },[])
+      
      if (showLoader) {
         return <Loading />;
       }

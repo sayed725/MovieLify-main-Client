@@ -3,7 +3,6 @@ import MainLayout from "./MainLayout";
 import Error from "./Pages/Error";
 import Home from "./Pages/Home";
 import Register from "./Pages/Register";
-// import Login from "./Pages/Login";
 import AllMovies from "./Pages/AllMovies";
 import AddMovie from "./Pages/AddMovie";
 import MyFavourites from "./Pages/MyFavourites";
@@ -12,6 +11,7 @@ import MovieDetails from "./Pages/MovieDetails";
 import UpdateMovie from "./Pages/UpdateMovie";
 import Contract from "./Pages/Contract";
 import Login from "./Pages/LoginForm";
+import PrivateRoute from "./Pages/PrivateRoute";
 
 
 
@@ -40,21 +40,21 @@ const router = createBrowserRouter([
         },
         {
             path:'/movie/:id',
-            element: <MovieDetails></MovieDetails>,
+            element: <PrivateRoute><MovieDetails></MovieDetails></PrivateRoute>,
             loader:({params})=>fetch(`http://localhost:5001/movie/${params.id}`)
         },
         {
             path:'/addmovies',
-            element: <AddMovie></AddMovie>
+            element: <PrivateRoute><AddMovie></AddMovie></PrivateRoute>
         },
         {
             path:'/updatemovies/:id',
-            element: <UpdateMovie></UpdateMovie>,
+            element: <PrivateRoute><UpdateMovie></UpdateMovie></PrivateRoute>,
             loader:({params})=>fetch(`http://localhost:5001/movie/${params.id}`)
         },
         {
             path:'/favorites',
-            element: <MyFavourites></MyFavourites>,
+            element: <PrivateRoute><MyFavourites></MyFavourites></PrivateRoute>,
            
         },
         {

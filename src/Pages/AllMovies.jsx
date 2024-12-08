@@ -16,11 +16,13 @@ const AllMovies = () => {
 
 
     useEffect(()=>{
-       setMovies(allData)
-       setShowLoader(false)
-    },[allData])
+      const timer = setTimeout(() => {
+        setShowLoader(false)
+      }, 300);
+      return ()=> clearTimeout(timer)
+    },[])
 
-    const [movies , setMovies] = useState()
+    const [movies , setMovies] = useState(allData)
 
 
 
@@ -41,9 +43,9 @@ const AllMovies = () => {
       }
 
     return (
-        <div className='bg-[#1b1d24]'>
+        <div className='py-10'>
            <div className='flex flex-col justify-center items-center gap-10'>    
-           <h2 className='text-4xl text-center font-semibold text-white'>Explore Iconic Movies</h2>
+           <h2 className='text-4xl text-center font-semibold'>Explore Iconic Movies</h2>
            <input
                 type="text"
                 onChange={(e)=>setSearch(e.target.value)}

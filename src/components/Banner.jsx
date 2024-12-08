@@ -25,7 +25,7 @@ const Banner = () => {
           <div
             className="h-[500px] w-full flex flex-col justify-end items-center text-gray-300 text-start bg-cover bg-center"
             style={{
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/banner-1.png')`,
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/avtar-banner.jpg')`,
             }}
           >
             <div className="flex justify-center items-center gap-3 lg:gap-5 py-5" >
@@ -34,7 +34,8 @@ const Banner = () => {
                 </div>
            <div className="">
            <h1 className=" text-2xl lg:text-4xl font-bold">
-            The Shawshank Redemption
+           Avatar: The Way of Water
+
             </h1>
             <p className="text-xl py-2">
              View Trailer
@@ -59,7 +60,7 @@ const Banner = () => {
                 </div>
            <div className="">
            <h1 className=" text-2xl lg:text-4xl font-bold">
-            The Shawshank Redemption
+           Interstellar
             </h1>
             <p className="text-xl py-2">
              View Trailer
@@ -74,7 +75,7 @@ const Banner = () => {
           <div
             className="h-full w-full flex flex-col justify-end items-center text-gray-300 text-start bg-cover bg-center"
             style={{
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/banner-3.jpg')`,
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/endgame-banner.jpg')`,
             }}
           >
             
@@ -84,7 +85,7 @@ const Banner = () => {
                 </div>
            <div className="">
            <h1 className=" text-2xl lg:text-4xl font-bold">
-            The Shawshank Redemption
+           Avengers: Endgame
             </h1>
             <p className="text-xl py-2">
              View Trailer
@@ -97,7 +98,7 @@ const Banner = () => {
           <div
             className="h-full w-full flex flex-col justify-end items-center text-gray-300 text-start bg-cover bg-center"
             style={{
-              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/banner-4.png')`,
+              backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/justice-banner.jpg')`,
 
             }}
           >
@@ -107,7 +108,7 @@ const Banner = () => {
                 </div>
            <div className="">
            <h1 className="text-2xl lg:text-4xl font-bold">
-            The Shawshank Redemption
+           Justice League
             </h1>
             <p className="text-xl py-2">
              View Trailer
