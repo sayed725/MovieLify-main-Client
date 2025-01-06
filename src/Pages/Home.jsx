@@ -12,9 +12,9 @@ const Home = () => {
 
             
             <Helmet><title>Movielify | Home</title></Helmet>
-            <div>
+            {/* <div>
                 <Darkmode></Darkmode>
-            </div>
+            </div> */}
            <div>
            <Banner></Banner>
            </div>

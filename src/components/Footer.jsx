@@ -9,6 +9,13 @@ const Footer = () => {
         {/* About Section */}
         <div className="mb-6 md:w-1/4">
           <h3 className="text-red-600 text-lg font-bold mb-4">Movelify</h3>
+          {/* <a className=" text-xl">
+          <img
+            className="h-[50px] w-[200px] object-fill"
+            src="/main-navlogo-removebg-preview.png"
+            alt="logo"
+          />
+        </a> */}
           <p className="text-sm">
           A user-friendly Movie Portal designed to simplify browsing, viewing, adding, and deleting movies while managing user favorites. Featuring a dynamic interface and seamless functionality, it enhances the movie exploration experience.
           </p>
