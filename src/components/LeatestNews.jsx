@@ -4,7 +4,7 @@ import { FaRegComment, FaRegEye } from "react-icons/fa";
 function LeatestNews() {
  
   return (
-    <div className="mx-auto p-6">
+    <div className="mx-auto p-6 container">
       {/* Header */}
       <div className="flex flex-col gap-5 pb-10">
         <h2 className="text-3xl font-bold text-gray-900 dark:text-white text-center animate__fadeInRight animate__animated animate__delay-2s">Latest News of HollyWood</h2>

@@ -76,7 +76,7 @@ const Navbar = () => {
   );
 
   return (
-    <div className="navbar bg-[#1b1d24] py-5 rounded-t-md text-white">
+    <div className="navbar items-center  bg-[#1b1d24] py-5 rounded-t-md text-white">
       <div className="navbar-start">
         <div className="dropdown">
           <div

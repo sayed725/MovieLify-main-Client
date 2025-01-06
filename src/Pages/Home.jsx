@@ -21,10 +21,10 @@ const Home = () => {
            <div className='py-5 sm:py-[50px]'>
             <ShowMovies></ShowMovies>
            </div>
-           <div className='py-5 sm:py-[50px]'>
+           <div className=''>
             <Trending></Trending>
            </div>
-           <div className='py-5 sm:py-[50px]' >
+           <div className='' >
             <LeatestNews></LeatestNews>
            </div>
         </div>

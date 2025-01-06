@@ -25,7 +25,7 @@ const Darkmode = () => {
 
 
     return (
-        <label className="swap swap-rotate cursor-pointer pr-10 flex py-2 justify-end items-end text-blue-400 bg-[#1b1d24]">
+        <label className="swap swap-rotate cursor-pointer pr-2  flex py-2 justify-end items-end text-blue-400 bg-[#1b1d24]">
                   {/* Hidden checkbox to control theme state */}
                   <input
                     type="checkbox"

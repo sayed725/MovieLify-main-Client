@@ -29,7 +29,7 @@ const ShowMovies = () => {
            </div>
            {/* movie card section starts  */}
 
-           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:px-12 mt-10'>
+           <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 container mx-auto py-10'>
             {
                 movies.map(movie=><Movies key={movie._id} movie={movie}></Movies>)
             }

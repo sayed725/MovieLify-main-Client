@@ -42,8 +42,8 @@ const Movies = ({movie}) => {
 
 
   return (
-    <div className=" text-white py-10">
-      <div className="container mx-auto px-4">
+    <div className=" text-white">
+      <div className="container mx-auto">
         <div className="">
             <div
               key={movie._id}

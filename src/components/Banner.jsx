@@ -19,7 +19,7 @@ const Banner = () => {
             disableOnInteraction: false, 
           }}
           speed={1000}
-        className="h-[500px] rounded-b-md"
+        className="h-[500px] rounded-b-md container"
       >
         {/* Slide 1 */}
         <SwiperSlide>
@@ -29,7 +29,7 @@ const Banner = () => {
               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/avtar-banner.jpg')`,
             }}
           >
-            <div className="flex justify-center items-center gap-3 lg:gap-5 py-5" >
+            <a href="https://www.youtube.com/"  target="_blank"><div className="flex justify-center items-center gap-3 lg:gap-5 py-5" >
                 <div>
                 <FaRegCirclePlay className="text-7xl lg:text-9xl text-[#ff4545] hover:text-white animate__flash animate__animated animate__repeat-3" />
                 </div>
@@ -44,6 +44,7 @@ const Banner = () => {
            
            </div>
             </div>
+            </a>
           </div>
         </SwiperSlide>
 
@@ -55,7 +56,7 @@ const Banner = () => {
               backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/banner-2.jpg')`,
             }}
           >
-           <div className="flex justify-center items-center gap-3 lg:gap-5 py-5" >
+           <a href="https://www.youtube.com/"  target="_blank"><div className="flex justify-center items-center gap-3 lg:gap-5 py-5" >
                 <div>
                 <FaRegCirclePlay className="text-7xl lg:text-9xl text-[#ff4545] hover:text-white animate__flash animate__animated animate__repeat-3" />
                 </div>
@@ -69,6 +70,7 @@ const Banner = () => {
            
            </div>
             </div>
+            </a>
           </div>
         </SwiperSlide>
          {/* Slide 3 */}
@@ -80,7 +82,7 @@ const Banner = () => {
             }}
           >
             
-            <div className="flex justify-center items-center gap-3 lg:gap-5 py-5" >
+           <a href="https://www.youtube.com/"  target="_blank"> <div className="flex justify-center items-center gap-3 lg:gap-5 py-5" >
                 <div>
                 <FaRegCirclePlay className="text-7xl lg:text-9xl text-[#ff4545] hover:text-white animate__flash animate__animated animate__repeat-3" />
                 </div>
@@ -93,6 +95,7 @@ const Banner = () => {
             </p>
            </div>
             </div>
+            </a>
           </div>
         </SwiperSlide> {/* Slide 4 */}
         <SwiperSlide>
@@ -103,7 +106,7 @@ const Banner = () => {
 
             }}
           >
-           <div className="flex justify-center items-center gap-3 lg:gap-5 py-5" >
+           <a href="https://www.youtube.com/"  target="_blank"><div className="flex justify-center items-center gap-3 lg:gap-5 py-5" >
                 <div>
                 <FaRegCirclePlay className="text-7xl lg:text-9xl text-[#ff4545] hover:text-white animate__flash animate__animated animate__repeat-3" />
                 </div>
@@ -116,6 +119,7 @@ const Banner = () => {
             </p>
            </div>
             </div>
+            </a>
           </div>
         </SwiperSlide>
       </Swiper>
