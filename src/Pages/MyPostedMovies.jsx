@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+import { AiFillStar } from "react-icons/ai";
 
 import axios from 'axios'
 
@@ -69,14 +70,16 @@ const MyPostedMovies = () => {
       </div>
     ))
   }
+
+  
   return (
     <section className='lg:container px-4 mx-auto py-12'>
       <Helmet> <title>Bite Bank | Manage Food </title></Helmet>
       <div className='flex items-center gap-x-3'>
-        <h2 className='text-lg font-medium text-gray-800 '>My Posted Movies</h2>
+        <h2 className='text-4xl font-semibold  '>My Posted Movies</h2>
 
         <span className='px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full '>
-          {movies.length} Food
+          {movies.length} Movies
         </span>
       </div>
 
@@ -100,7 +103,7 @@ const MyPostedMovies = () => {
                       scope='col'
                       className='px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500'
                     >
-                      <span>Expired Date</span>
+                      <span>Genre</span>
                     </th>
 
                     <th
@@ -108,7 +111,7 @@ const MyPostedMovies = () => {
                       className='px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500'
                     >
                       <button className='flex items-center gap-x-2'>
-                        <span>Quantity</span>
+                        <span>Duration</span>
                       </button>
                     </th>
 
@@ -116,13 +119,13 @@ const MyPostedMovies = () => {
                       scope='col'
                       className='px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500'
                     >
-                      Status
+                      Rating
                     </th>
                     <th
                       scope='col'
                       className='px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500'
                     >
-                      Location
+                      Poster
                     </th>
 
                     <th className='px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500'>
@@ -138,27 +141,22 @@ const MyPostedMovies = () => {
                   {movies.map(movie => (
                     <tr key={movie._id}>
                       <td className='px-4 py-4 text-sm text-gray-500  whitespace-nowrap'>
-                        {movie.title}
+                        {movie.title}({movie.year})
                       </td>
 
                       <td className='px-4 py-4 text-sm text-gray-500  whitespace-nowrap'>
-                        {movie.duration}
+                        {movie.genre}
                       </td>
 
                       <td className='px-4 py-4 text-sm text-gray-500   whitespace-nowrap'>
-                        {movie.rating}
+                        {movie.duration} Minutes
                       </td>
-                      <td className='px-4 py-4 text-sm whitespace-nowrap'>
-                        <div className='flex items-center gap-x-2'>
-                          <p
-                          
-                          >
-                            {}
-                          </p>
-                        </div>
+                      <td className='px-4 flex gap-1 py-4 text-sm text-gray-500   whitespace-nowrap'>
+                        <p className='flex items-center mt-3'>{movie.rating} <AiFillStar className='text-yellow-500'></AiFillStar></p>
                       </td>
+                     
                       <td className='px-4 py-4 text-sm text-gray-500  whitespace-nowrap'>
-                        {}
+                        <img src={movie.poster} className='h-10 w-10 rounded-full' alt="" />
                       </td>
                       <td className='px-4 py-4 text-sm whitespace-nowrap'>
                         <div className='flex items-center gap-x-6'>
