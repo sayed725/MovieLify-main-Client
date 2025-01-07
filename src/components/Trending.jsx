@@ -88,9 +88,11 @@ const Trending = () => {
                   className="h-64 w-full object-cover filter brightness-90 hover:brightness-100"
                 />
                 <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col justify-center items-center opacity-0 hover:opacity-100 transition duration-1000">
-                  <button className="text-white bg-red-500 px-4 py-2 rounded-md m-2 w-[200px] flex items-center gap-2 justify-center">
+                 <a href="https://www.youtube.com/" target="_blank">
+                 <button className="text-white bg-red-500 px-4 py-2 rounded-md m-2 w-[200px] flex items-center gap-2 justify-center">
                   <FaRegCirclePlay className="text-2xl" /> View Trailer
                   </button>
+                 </a>
                 </div>
               </div>
               <div className="p-4 flex justify-between items-center">
@@ -98,14 +100,14 @@ const Trending = () => {
                <h3 className="font-bold text-lg">{movie.title}</h3>
                 <p className="text-gray-600">{movie.genre}</p>
                 <div className="flex items-center justify-between gap-3 mt-2">
-                    <p className="text-red-500">{movie.rating}</p>
+                    <p className="text-yellow-500">{movie.rating}</p>
                   <div className="flex">
                     {[...Array(10)].map((_, i) => (
                       <svg
                         key={i}
                         xmlns="http://www.w3.org/2000/svg"
                         className={`h-5 w-5 ${
-                          i < movie.rating ? "text-red-500" : "text-gray-300"
+                          i < movie.rating ? "text-yellow-500" : "text-gray-300"
                         }`}
                         fill="currentColor"
                         viewBox="0 0 24 24"
@@ -116,7 +118,7 @@ const Trending = () => {
                   </div>
                </div>
                 </div>
-                  <FaRegCirclePlay className="text-red-500 text-5xl" />
+                  <a href="https://www.youtube.com/" target="_blank"><FaRegCirclePlay className="text-red-500 text-5xl" /></a>
               </div>
             </div>
           </SwiperSlide>

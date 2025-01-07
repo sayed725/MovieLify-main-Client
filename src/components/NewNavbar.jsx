@@ -59,6 +59,18 @@ const NewNavbar = () => {
           My Favorites
         </NavLink>
       </li>
+       <li>
+              <NavLink
+                className={({ isActive }) =>
+                  isActive
+                    ? "active border-b-2 border-red-600 rounded-none hover:border-b-2 text-white hover:border-red-600 hover:rounded-none"
+                    : " hover:border-b-2 hover:border-red-600 hover:rounded-none text-white"
+                }
+                to="/mymovies"
+              >
+                My Movies
+              </NavLink>
+            </li>
 
       <li>
         <NavLink

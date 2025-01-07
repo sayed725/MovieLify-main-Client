@@ -19,7 +19,7 @@ const MyFavourites = () => {
   useEffect(() => {
     if (!user?.email) return;
 
-    fetch(`https://a-10-movielify-server.vercel.app/favorite/${user.email}`)
+    fetch(`http://localhost:5001/favorite/${user.email}`)
       .then((res) => res.json())
       .then((data) => {
          
@@ -38,7 +38,7 @@ const MyFavourites = () => {
   const handleDelete =(id)=>{
     console.log('delete', id)
     // delete from the database
-    fetch(`https://a-10-movielify-server.vercel.app/favorite/${id}`, {
+    fetch(`http://localhost:5001/favorite/${id}`, {
         method: 'DELETE'
     })
         .then(res => res.json())

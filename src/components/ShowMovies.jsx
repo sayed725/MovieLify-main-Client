@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Link, useLoaderData } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Movies from './Movies';
 import Loading from '../Pages/Loading';
 import 'animate.css';
@@ -7,14 +7,17 @@ import 'animate.css';
 
 const ShowMovies = () => {
    
-    const allData = useLoaderData()
+    
     const [showLoader, setShowLoader] = useState(true)
-    const [movies , setMovies] = useState(allData)
+    const [movies , setMovies] = useState([])
     useEffect(()=>{
-        const timer = setTimeout(() => {
-          setShowLoader(false)
-        }, 300);
-        return ()=> clearTimeout(timer)
+        
+      fetch(
+        `http://localhost:5001/sortedmovie`
+      )
+        .then((res) => res.json())
+        .then((data) => setMovies(data));
+        setShowLoader(false)
       },[])
 
      if (showLoader) {

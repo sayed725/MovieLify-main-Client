@@ -12,6 +12,7 @@ import UpdateMovie from "./Pages/UpdateMovie";
 import Contract from "./Pages/Contract";
 import Login from "./Pages/LoginForm";
 import PrivateRoute from "./Pages/PrivateRoute";
+import MyPostedMovies from "./Pages/MyPostedMovies";
 
 
 
@@ -24,7 +25,6 @@ const router = createBrowserRouter([
         {
             path:'/',
             element: <Home></Home>,
-            loader: ()=> fetch ('https://a-10-movielify-server.vercel.app/sortedmovie'),
             children:[
                 {
                     path:"/",
@@ -35,13 +35,13 @@ const router = createBrowserRouter([
         {
             path:'/allmovies',
             element: <AllMovies></AllMovies>,
-            loader: ()=> fetch ('https://a-10-movielify-server.vercel.app/movie'),
+            
 
         },
         {
             path:'/movie/:id',
             element: <PrivateRoute><MovieDetails></MovieDetails></PrivateRoute>,
-            loader:({params})=>fetch(`https://a-10-movielify-server.vercel.app/movie/${params.id}`)
+            loader:({params})=>fetch(`http://localhost:5001/movie/${params.id}`)
         },
         {
             path:'/addmovies',
@@ -50,13 +50,19 @@ const router = createBrowserRouter([
         {
             path:'/updatemovies/:id',
             element: <PrivateRoute><UpdateMovie></UpdateMovie></PrivateRoute>,
-            loader:({params})=>fetch(`https://a-10-movielify-server.vercel.app/movie/${params.id}`)
+            loader:({params})=>fetch(`http://localhost:5001/movie/${params.id}`)
         },
         {
             path:'/favorites',
             element: <PrivateRoute><MyFavourites></MyFavourites></PrivateRoute>,
            
         },
+        {
+            path:'/mymovies',
+            element: <PrivateRoute><MyPostedMovies></MyPostedMovies></PrivateRoute>,
+           
+        },
+
         {
             path:'/contract',
             element: <Contract></Contract>

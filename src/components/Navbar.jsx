@@ -59,6 +59,7 @@ const Navbar = () => {
           My Favorites
         </NavLink>
       </li>
+     
 
       <li>
         <NavLink

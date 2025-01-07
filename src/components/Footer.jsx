@@ -90,7 +90,7 @@ const Footer = () => {
         </div>
         
         <p className="text-sm text-white mt-4 opacity-70">
-          © 2018 Movielify, All Rights Reserved
+          © 2025 Movielify, All Rights Reserved
         </p>
       </div>
     </footer>

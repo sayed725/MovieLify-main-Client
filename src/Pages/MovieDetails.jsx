@@ -51,7 +51,7 @@ const MovieDetails = () => {
 
 
                 // delete from the database
-                fetch(`https://a-10-movielify-server.vercel.app/movie/${id}`, {
+                fetch(`http://localhost:5001/movie/${id}`, {
                     method: 'DELETE'
                 })
                     .then(res => res.json())
@@ -96,7 +96,7 @@ const MovieDetails = () => {
             userName,
         }
         
-        fetch('https://a-10-movielify-server.vercel.app/favoritelist',{
+        fetch('http://localhost:5001/favoritelist',{
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

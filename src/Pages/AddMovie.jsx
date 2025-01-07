@@ -90,7 +90,7 @@ const AddMovie = () => {
     // console.log(newMovie);
 
     // send data to the server
-    fetch('https://a-10-movielify-server.vercel.app/movie',{
+    fetch('http://localhost:5001/movie',{
         method: 'POST',
         headers: {
             'content-type' : 'application/json'
