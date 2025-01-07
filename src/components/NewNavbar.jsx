@@ -70,7 +70,7 @@ const NewNavbar = () => {
                 }
                 to="/mymovies"
               >
-                My movies
+                My Movies
               </NavLink>
             </li>): '' }
      

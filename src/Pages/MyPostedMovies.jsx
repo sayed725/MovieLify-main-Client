@@ -1,6 +1,6 @@
 import { useContext, useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
-import { AiFillStar } from "react-icons/ai";
+import { AiFillStar  } from "react-icons/ai";
 
 import axios from 'axios'
 
@@ -65,12 +65,22 @@ const MyPostedMovies = () => {
    
   }
 
+  if (movies.length == 0) {
+    return (
+      <div className="py-[100px]">
+        <h2 className="text-4xl text-center font-bold">
+          Please Add Some Movie
+        </h2>
+      </div>
+    );
+  }
+
  
 
   
   return (
     <section className='lg:container px-4 mx-auto py-12'>
-      <Helmet> <title>Bite Bank | Manage Food </title></Helmet>
+      {/* <Helmet> <title>Bite Bank | Manage Food </title></Helmet> */}
       <div className='flex items-center gap-x-3 flex-col sm:flex-row gap-5'>
         <h2 className='text-4xl font-semibold  '>My Posted Movies</h2>
 
@@ -148,7 +158,9 @@ const MyPostedMovies = () => {
                         {movie.duration} Minutes
                       </td>
                       <td className='px-4 flex gap-1 py-4 text-sm text-gray-500   whitespace-nowrap'>
-                        <p className='flex items-center mt-3'>{movie.rating} <AiFillStar className='text-yellow-500'></AiFillStar></p>
+                        <p className='flex items-center mt-3'>{movie.rating} 
+                            <AiFillStar className='text-yellow-500'></AiFillStar>
+                            </p>
                       </td>
                      
                       <td className='px-4 py-4 text-sm text-gray-500  whitespace-nowrap'>
