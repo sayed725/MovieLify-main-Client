@@ -97,7 +97,7 @@ const UpdateMovie = () => {
     // console.log(updatedMovie);
 
     // send data to the server 
-    fetch(`http://localhost:5001/movie/${_id}`,{
+    fetch(`https://a-10-movielify-server.vercel.app/movie/${_id}`,{
         method: 'PUT',
         headers: {
             'content-type' : 'application/json'

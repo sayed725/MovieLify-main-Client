@@ -18,7 +18,7 @@ const MyPostedMovies = () => {
   }, [user])
   const fetchAllMovies = async () => {
     const { data } = await axios.get(
-      `http://localhost:5001/mymovies/${user?.email}`
+      `https://a-10-movielify-server.vercel.app/mymovies/${user?.email}`
     )
     setMovies(data)
   }
@@ -39,7 +39,7 @@ const MyPostedMovies = () => {
         if (result.isConfirmed) {
             try {
                 axios.delete(
-                 `http://localhost:5001/movie/${id}`
+                 `https://a-10-movielify-server.vercel.app/movie/${id}`
                )
                .then(res=>{
                  // console.log(res.data)

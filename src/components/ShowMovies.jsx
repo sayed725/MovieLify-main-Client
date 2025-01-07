@@ -13,7 +13,7 @@ const ShowMovies = () => {
     useEffect(()=>{
         
       fetch(
-        `http://localhost:5001/sortedmovie`
+        `https://a-10-movielify-server.vercel.app/sortedmovie`
       )
         .then((res) => res.json())
         .then((data) => setMovies(data));

@@ -71,7 +71,7 @@ const MovieDetails = () => {
             userName,
         }
         
-        fetch('http://localhost:5001/favoritelist',{
+        fetch('https://a-10-movielify-server.vercel.app/favoritelist',{
             method: 'POST',
             headers: {
                 'content-type' : 'application/json'

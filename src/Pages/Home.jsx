@@ -3,7 +3,7 @@ import Banner from '../components/Banner';
 import ShowMovies from '../components/ShowMovies';
 import LeatestNews from '../components/LeatestNews';
 import Trending from '../components/Trending';
-import Darkmode from '../components/Darkmode';
+
 import { Helmet } from 'react-helmet-async';
 
 const Home = () => {
