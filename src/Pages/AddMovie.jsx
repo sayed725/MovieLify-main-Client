@@ -257,7 +257,7 @@ const AddMovie = () => {
           </div>
           <div className="form-control mt-6">
             <button className="btn text-white bg-[#ff4545] hover:text-black hover:bg-red-600">
-              Add Coffee
+              Add Movie
             </button>
           </div>
         </form>

@@ -34,43 +34,46 @@ const NewNavbar = () => {
         </NavLink>
       </li>
 
-      <li>
-        <NavLink
-          className={({ isActive }) =>
-            isActive
-              ? "active border-b-2 border-red-600 rounded-none hover:border-b-2 text-white hover:border-red-600 hover:rounded-none"
-              : " hover:border-b-2 hover:border-red-600 text-white hover:rounded-none"
-          }
-          to="/addmovies"
-        >
-          Add Movie
-        </NavLink>
-      </li>
+     {user && user?.email ? (<li>
+             <NavLink
+               className={({ isActive }) =>
+                 isActive
+                   ? "active border-b-2 border-red-600 rounded-none hover:border-b-2 text-white hover:border-red-600 hover:rounded-none"
+                   : " hover:border-b-2 hover:border-red-600 text-white hover:rounded-none"
+               }
+               to="/addmovies"
+             >
+               Add Movie
+             </NavLink>
+           </li>): '' }
 
-      <li>
-        <NavLink
-          className={({ isActive }) =>
-            isActive
-              ? "active border-b-2 border-red-600 rounded-none hover:border-b-2 text-white hover:border-red-600 hover:rounded-none"
-              : " hover:border-b-2 hover:border-red-600 hover:rounded-none text-white"
-          }
-          to="/favorites"
-        >
-          My Favorites
-        </NavLink>
-      </li>
-       <li>
+          
+
+     {user && user?.email ? (<li>
+             <NavLink
+               className={({ isActive }) =>
+                 isActive
+                   ? "active border-b-2 border-red-600 rounded-none hover:border-b-2 text-white hover:border-red-600 hover:rounded-none"
+                   : " hover:border-b-2 hover:border-red-600 text-white hover:rounded-none"
+               }
+               to="/favorites"
+             >
+               My Favorites
+             </NavLink>
+           </li>): '' }
+      {user && user?.email ? (<li>
               <NavLink
                 className={({ isActive }) =>
                   isActive
                     ? "active border-b-2 border-red-600 rounded-none hover:border-b-2 text-white hover:border-red-600 hover:rounded-none"
-                    : " hover:border-b-2 hover:border-red-600 hover:rounded-none text-white"
+                    : " hover:border-b-2 hover:border-red-600 text-white hover:rounded-none"
                 }
                 to="/mymovies"
               >
-                My Movies
+                My movies
               </NavLink>
-            </li>
+            </li>): '' }
+     
 
       <li>
         <NavLink

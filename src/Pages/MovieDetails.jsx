@@ -1,7 +1,7 @@
 import React, { useContext } from 'react';
-import { Link, useLoaderData, useNavigate } from 'react-router-dom';
+import { useLoaderData, useNavigate } from 'react-router-dom';
 import { FaStar, FaHeart } from "react-icons/fa";
-import { IoTrashBin } from "react-icons/io5";
+
 import { FaRegCirclePlay } from "react-icons/fa6";
 import { MdSystemUpdateAlt } from "react-icons/md";
 import Swal from 'sweetalert2';
@@ -37,41 +37,16 @@ const MovieDetails = () => {
         }
       };
 
-      const handleDelete = id=>{
-        Swal.fire({
-            title: "Are you sure?",
-            text: "You won't be able to revert this!",
-            icon: "warning",
-            showCancelButton: true,
-            confirmButtonColor: "#3085d6",
-            cancelButtonColor: "#d33",
-            confirmButtonText: "Yes, delete it!"
-        }).then((result) => {
-            if (result.isConfirmed) {
-
-
-                // delete from the database
-                fetch(`http://localhost:5001/movie/${id}`, {
-                    method: 'DELETE'
-                })
-                    .then(res => res.json())
-                    .then(data => {
-                        if (data.deletedCount) {
-                            Swal.fire({
-                                title: "Deleted!",
-                                text: "Your file has been deleted.",
-                                icon: "success"
-                            });
-
-                           navigate("/")
-                        }
-                    })
-            }
-        });
-
-      }
 
       const handleFavorite = favoriteMovie =>{
+
+        if(!user){
+          Swal.fire({
+            title: 'Error!',
+            text: 'Please log in to add Your Favorite Movie',
+            icon: 'error',
+        });
+        }
 
          favoriteMovie = {
             poster,
@@ -123,9 +98,9 @@ const MovieDetails = () => {
 
 
     return (
-        <div className="mx-auto lg:py-[70px] bg-[#1b1d24] lg:px-10 text-white">
+        <div className=" mx-auto py-10 lg:py-[70px] bg-[#1b1d24] lg:px-10 text-white">
              <Helmet><title>Movielify | Movie Details</title></Helmet>
-      <div className="lg:flex lg:flex-row items-center md:items-start gap-[60px]">
+      <div className=" container mx-auto lg:flex lg:flex-row items-center md:items-start gap-[60px]">
         {/* Poster */}
      
       <img
@@ -138,7 +113,7 @@ const MovieDetails = () => {
 
         {/* Details */}
         <div className="flex-1">
-        <div className="text-white p-6">
+        <div className="text-white mt-5 lg:mt-0">
       {/* Title and Year */}
       <div className="flex items-center justify-between">
         <h1 className="text-4xl font-bold animate__headShake animate__animated">
@@ -153,11 +128,7 @@ const MovieDetails = () => {
           <FaHeart className='text-5xl border-2 p-2 hover:border-[#ff4545] border-[#a4ba16] rounded-full' />
           <span className="font-semibold text-2xl">Add to Favorite</span>
         </button>
-        <button onClick={()=>handleDelete(_id)} 
-        className="flex items-center gap-2 hover:text-[#ff4545] text-[#a4ba16]">
-        <IoTrashBin className='text-5xl border-2 p-2 hover:border-[#ff4545] border-[#a4ba16] rounded-full' />
-          <span className="font-semibold text-2xl">Delete</span>
-        </button>
+       
       </div>
 
       {/* Ratings */}
@@ -200,9 +171,10 @@ const MovieDetails = () => {
         <h2 className='text-[#a4ba16]'>Released Year : <span className='text-white'>{year}.</span></h2>
         <h2 className='text-[#a4ba16]'>Duration : <span className='text-white'>{duration}  Minutes.</span></h2>
        <div className='flex flex-col sm:flex-row gap-10'>
-       <button className='btn text-white text-xl border-none hover:text-black hover:bg-[#ff4545] bg-[#ff4545]'> <FaRegCirclePlay /> Watch Trailer</button>
-       <Link to={`/updatemovies/${_id}`}
-        className='btn text-white  text-xl border-none hover:text-black hover:bg-[#a4ba16] bg-[#a4ba16]'> <MdSystemUpdateAlt /> Update Details</Link>
+       <a href='https://www.youtube.com/' target='_blank'
+       className='btn text-white text-xl border-none hover:text-black hover:bg-[#ff4545] bg-[#ff4545]'> <FaRegCirclePlay /> Watch Trailer</a>
+       <a href='https://www.youtube.com/' target='_blank'
+        className='btn text-white  text-xl border-none hover:text-black hover:bg-[#a4ba16] bg-[#a4ba16]'> <FaRegCirclePlay /> Watch Online</a>
        
        </div>
       

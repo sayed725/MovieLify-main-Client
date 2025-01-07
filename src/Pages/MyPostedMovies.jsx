@@ -7,6 +7,7 @@ import axios from 'axios'
 
 import { Helmet } from 'react-helmet-async'
 import { AuthContext } from '../Porvider/AuthProvider'
+import Swal from 'sweetalert2';
 const MyPostedMovies = () => {
   
   const { user } = useContext(AuthContext)
@@ -17,68 +18,63 @@ const MyPostedMovies = () => {
   }, [user])
   const fetchAllMovies = async () => {
     const { data } = await axios.get(
-      `http://localhost:5001/sortedmovie`
+      `http://localhost:5001/mymovies/${user?.email}`
     )
     setMovies(data)
   }
 
   // delete functionality
   const handleDelete = async id => {
-    try {
-       await axios.delete(
-        `${import.meta.env.VITE_API_URL}/delete-food/${id}`
-      )
-      .then(res=>{
-        // console.log(res.data)
-        if(res.data.deletedCount){
-          toast.success('Food Data Deleted Successfully!!!')
-          fetchAllFoods()
+
+    Swal.fire({
+        title: "Are you sure?",
+        text: "You won't be able to revert this!",
+        icon: "warning",
+        showCancelButton: true,
+        confirmButtonColor: "#3085d6",
+        cancelButtonColor: "#d33",
+        confirmButtonText: "Yes, delete it!"
+      }).then((result) => {
+
+        if (result.isConfirmed) {
+            try {
+                axios.delete(
+                 `http://localhost:5001/movie/${id}`
+               )
+               .then(res=>{
+                 // console.log(res.data)
+                 if(res.data.deletedCount){
+                    Swal.fire({
+                        title: "Deleted!",
+                        text: "Your Movie has been deleted.",
+                        icon: "success"
+                      });
+                   fetchAllMovies()
+                 }
+               })
+               
+             } catch (err) {
+               // console.log(err)
+               
+             }
+         
         }
-      })
-      
-    } catch (err) {
-      // console.log(err)
-      
-    }
+      });
+
+
+   
   }
 
-  const modernDelete = id => {
-    toast(t => (
-      <div className='flex gap-3 items-center'>
-        <div>
-          <p>
-            Are you <b>sure?</b>
-          </p>
-        </div>
-        <div className='gap-2 flex'>
-          <button
-            className='bg-red-400 text-white px-3 py-1 rounded-md'
-            onClick={() => {
-              toast.dismiss(t.id)
-              handleDelete(id)
-            }}
-          >
-            Yes
-          </button>
-          <button
-            className='bg-green-400 text-white px-3 py-1 rounded-md'
-            onClick={() => toast.dismiss(t.id)}
-          >
-            Cancel
-          </button>
-        </div>
-      </div>
-    ))
-  }
+ 
 
   
   return (
     <section className='lg:container px-4 mx-auto py-12'>
       <Helmet> <title>Bite Bank | Manage Food </title></Helmet>
-      <div className='flex items-center gap-x-3'>
+      <div className='flex items-center gap-x-3 flex-col sm:flex-row gap-5'>
         <h2 className='text-4xl font-semibold  '>My Posted Movies</h2>
 
-        <span className='px-3 py-1 text-xs text-blue-600 bg-blue-100 rounded-full '>
+        <span className='px-3 py-1 mt-1 text-xs text-blue-600 bg-blue-100 rounded-full '>
           {movies.length} Movies
         </span>
       </div>
@@ -103,7 +99,7 @@ const MyPostedMovies = () => {
                       scope='col'
                       className='px-4 py-3.5 text-sm font-normal text-left rtl:text-right text-gray-500'
                     >
-                      <span>Genre</span>
+                      <span>Category</span>
                     </th>
 
                     <th
@@ -161,7 +157,7 @@ const MyPostedMovies = () => {
                       <td className='px-4 py-4 text-sm whitespace-nowrap'>
                         <div className='flex items-center gap-x-6'>
                           <Link
-                            to={`/update-food/${movie._id}`}
+                            to={`/updatemovies/${movie._id}`}
                             className='text-gray-500 transition-colors duration-200   hover:text-yellow-500 focus:outline-none'
                           >
                             <svg
@@ -185,7 +181,7 @@ const MyPostedMovies = () => {
                         <div className='flex items-center gap-x-6'>
                         <Link>
                         <button
-                            onClick={() => modernDelete(movie._id)}
+                            onClick={() => handleDelete(movie._id)}
                             className='text-gray-500 transition-colors duration-200   hover:text-red-500 focus:outline-none'
                           >
                             <svg

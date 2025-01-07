@@ -33,8 +33,8 @@ const Navbar = () => {
           All Movies
         </NavLink>
       </li>
-
-      <li>
+      
+      {user && user?.email ? (<li>
         <NavLink
           className={({ isActive }) =>
             isActive
@@ -45,20 +45,20 @@ const Navbar = () => {
         >
           Add Movie
         </NavLink>
-      </li>
+      </li>): '' }
 
-      <li>
+      {user && user?.email ? (<li>
         <NavLink
           className={({ isActive }) =>
             isActive
               ? "active border-b-2 border-red-600 rounded-none hover:border-b-2 text-white hover:border-red-600 hover:rounded-none"
-              : " hover:border-b-2 hover:border-red-600 hover:rounded-none text-white"
+              : " hover:border-b-2 hover:border-red-600 text-white hover:rounded-none"
           }
           to="/favorites"
         >
           My Favorites
         </NavLink>
-      </li>
+      </li>): '' }
      
 
       <li>
@@ -70,7 +70,7 @@ const Navbar = () => {
           }
           to="/contract"
         >
-          Contracts
+          Contract
         </NavLink>
       </li>
     </>

@@ -5,7 +5,7 @@ import { FaPhone, FaMapMarkerAlt, FaEnvelope, FaFacebook, FaInstagram, FaTumblr,
 const Footer = () => {
   return (
     <footer className="bg-[#1b1d24] text-gray-300 py-10 rounded-none">
-      <div className="container mx-auto px-6 gap-5 md:flex md:justify-between">
+      <div className="container mx-auto gap-5 md:flex md:justify-between">
         {/* About Section */}
         <div className="mb-6 md:w-1/4">
           <h3 className="text-red-600 text-lg font-bold mb-4">Movelify</h3>

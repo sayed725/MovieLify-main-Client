@@ -2,7 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { AuthContext } from "../Porvider/AuthProvider";
 import Loading from "./Loading";
 
-import Again from "../components/Again";
+
 import FMovies from "./FMovie";
 import Swal from "sweetalert2";
 import { Helmet } from "react-helmet-async";
@@ -12,7 +12,6 @@ const MyFavourites = () => {
 
   const [movies, setMovies] = useState([]);
 
-  const [showLoader, setShowLoader] = useState(true)
 
 
 
@@ -62,12 +61,6 @@ const MyFavourites = () => {
     return <Loading />;
   }
 
-  if (!user) {
-    return <Again />;
-  }
-  if (showLoader) {
-    return <Loading />;
-  }
 
   if (movies.length == 0) {
     return (
@@ -80,7 +73,7 @@ const MyFavourites = () => {
   }
 
   return (
-    <div className="my-10">
+    <div className="py-10">
          <Helmet><title>Movielify | My Favorite</title></Helmet>
       <div className="">
         <h2 className="text-4xl text-center font-semibold animate__fadeInRight animate__animated">
@@ -89,7 +82,7 @@ const MyFavourites = () => {
       </div>
       {/* movie card section starts  */}
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 md:px-12 mt-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:px-12">
         {movies.map((movie, i) => (
           <FMovies key={i} movie={movie} handleDelete={handleDelete} ></FMovies>
         ))}
