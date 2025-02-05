@@ -103,8 +103,8 @@ Welcome to this project.This is a user-friendly Movie Portal to simplify the pro
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/sayed725/MovieLify-client.git
-   cd MovieLify-Client
+   git clone https://github.com/sayed725/MovieLify-main-Client.git
+   cd MovieLify-main-Client
    ```
 
 2. Install dependencies:
